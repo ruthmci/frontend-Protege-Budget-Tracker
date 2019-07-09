@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-// import Routes from './Routes'
+import Routes from './Routes'
 
 class App extends React.Component {
   state = {
@@ -23,11 +23,7 @@ class App extends React.Component {
     if (proteges.length === 0) {
       return null
     } else {
-      return (
-        <div>there is data</div>
-      )
-    //  return <Recipes recipes={recipes} />
-    // return <Routes recipes={recipes}/>
+        return <Routes proteges={proteges}/>
     }
   }
 }
