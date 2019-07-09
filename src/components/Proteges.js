@@ -5,10 +5,11 @@ const renderProteges = (proteges) => {
   return proteges.map((protege, index) => {
     return (
       <div key={index}>
-        <h1>{protege.name}</h1>
+        <h1>{protege.protegename}</h1>
         <ul>
-          <li>{protege.expenditure}</li>
-          <li>{protege.balance}</li>
+          <li>Expenditure: {protege.expenditure}</li>
+          <li>Balance: {protege.balance}</li>
+          <li>View/edit</li>
         </ul>
       </div>
     )
