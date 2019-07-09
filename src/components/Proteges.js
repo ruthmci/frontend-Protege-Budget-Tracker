@@ -1,15 +1,15 @@
 import React from 'react';
-
+import { Link} from "react-router-dom";
 
 const renderProteges = (proteges) => {
   return proteges.map((protege, index) => {
     return (
       <div key={index}>
-        <h1>{protege.protegename}</h1>
+        <h2>{protege.protegename}</h2>
         <ul>
           <li>Expenditure: {protege.expenditure}</li>
           <li>Balance: {protege.balance}</li>
-          <li>View/edit</li>
+          <li><Link to={"/proteges/"+protege._id}>View/edit</Link></li>
         </ul>
       </div>
     )
