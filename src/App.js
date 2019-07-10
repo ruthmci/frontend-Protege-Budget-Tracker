@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Routes from './Routes'
+import axios from 'axios'
 
 class App extends React.Component {
   state = {
@@ -23,6 +24,7 @@ class App extends React.Component {
       items: itemData      
     })
   }
+
 
   render() {
     const { proteges, items } = this.state
