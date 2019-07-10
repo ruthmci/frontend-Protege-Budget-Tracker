@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import {Redirect} from 'react-router-dom'
 import axios from 'axios'
+
 
 class ProtegeForm extends Component {
     
@@ -11,7 +13,8 @@ class ProtegeForm extends Component {
             protegeemail: '',
             expenditure: '',
             balance: '1000',
-            date: ''
+            date: '', 
+            adding: true
         };
       }
 
@@ -35,7 +38,8 @@ class ProtegeForm extends Component {
           protegeemail: '',
           expenditure: '', 
           balance: '',
-          date: ''
+          date: '', 
+          adding: false
       })
     }
 
@@ -44,7 +48,8 @@ class ProtegeForm extends Component {
   }
 
   render(){
-    console.log(this.state);
+    // console.log(this.state);
+    if (this.state.adding === true) {
       return (
         <div className="protege-form">
           <h1>Protege form</h1>
@@ -87,6 +92,10 @@ class ProtegeForm extends Component {
           </form>
         </div>
       );
+    } else
+      return (
+        <Redirect to='/' />
+      )
     }
 }
 
