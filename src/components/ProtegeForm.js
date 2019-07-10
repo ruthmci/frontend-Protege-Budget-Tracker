@@ -8,7 +8,7 @@ class ProtegeForm extends Component {
         
         this.state = { 
             protegename: '',
-            email: '',
+            protegeemail: '',
             expenditure: '',
             balance: '1000',
             date: ''
@@ -20,7 +20,7 @@ class ProtegeForm extends Component {
       e.preventDefault();
       const newProtege = {
           protegename: this.state.protegename, 
-          email: this.state.email,
+          protegeemail: this.state.protegeemail,
           expenditure: this.state.expenditure, 
           balance: this.state.balance,
           date: this.state.date
@@ -32,7 +32,7 @@ class ProtegeForm extends Component {
 
       this.setState({
           protegename: '',
-          email: '',
+          protegeemail: '',
           expenditure: '', 
           balance: '',
           date: ''
@@ -57,13 +57,13 @@ class ProtegeForm extends Component {
                 placeholder="protege name" 
                 value={this.state.protegename} 
               />
-              <label htmlFor="email"></label>
+              <label htmlFor="protegeemail">Email</label>
               <input 
                 onChange={this.handleChange} 
                 type="text" 
-                id="email" 
+                id="protegeemail" 
                 placeholder="email" 
-                value={this.state.email} 
+                value={this.state.protegeemail} 
               />
               <label htmlFor="expenditure">Expenditure</label>
               <input 
