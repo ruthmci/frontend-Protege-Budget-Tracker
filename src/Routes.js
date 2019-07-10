@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Proteges from './components/Proteges'
 import Items from './components/Items'
 import GetProtegeData from './components/GetProtegeData'
+import ProtegeForm from './components/ProtegeForm'
 
 class Routes extends React.Component {
   render() {
@@ -10,17 +11,17 @@ class Routes extends React.Component {
     return (
       <BrowserRouter>
       <Switch>
-        <Route path="/list" render={() => {
-          return <Proteges proteges={proteges} />
-        }}
-        />
         <Route path="/items" render={() => {
           return <Items items={items} />
         }}
         />
+        <Route path="/add" component={ProtegeForm}
+        />
         <Route path='/proteges/:id' component={GetProtegeData} />
-        {/* <Route path="/login" exact component={Login} />
-        <Route path="/" exact component={Home} /> */}
+        <Route path="/" render={() => {
+          return <Proteges proteges={proteges} />
+        }}
+        />
       </Switch>
       </BrowserRouter>
     ) 

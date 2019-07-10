@@ -6,7 +6,7 @@ const renderItems = (items) => {
       <div key={index}>
         {/* <h2>{item.protegename}</h2> */}
         <ul>
-          <li>Description: {item.description} | Spent: {item.amount}</li>
+          <li> {item.description} | $ {item.amount}</li>
         </ul>
       </div>
     )
