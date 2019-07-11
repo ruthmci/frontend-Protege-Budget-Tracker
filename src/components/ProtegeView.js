@@ -1,12 +1,13 @@
 import React from 'react';
-
+import { Link} from "react-router-dom";
 const renderItems = (items) => {
   return items.map((item, index) => {
     return (
       <div key={index}>
         {/* <h2>{item.protegename}</h2> */}
         <ul>
-          <li> {item.description} | $ {item.expenditure}</li>
+          <li> {item.description} | $ {item.expenditure}</li><Link to= "/edit">Edit
+          </Link>
         </ul>
       </div>
     )
@@ -19,7 +20,7 @@ const renderItems = (items) => {
 
 // const convertedtoInt = (items) => items.map((item, index) => parseInt(item.expenditure, 10))
 
-// const calculateExpenditure = (convertedtoInt) => items.reduce((total, item) => total.expenditure + item.expenditure, 0)
+const calculateExpenditure = (items) => items.reduce((total, item) => total + item.expenditure, 0)
 
 const ProtegeView = (props) => {
   console.log(props)
@@ -27,7 +28,7 @@ const ProtegeView = (props) => {
     <>
       <h1>Name: {props.protege.protege.protegename}</h1>
       <h2>Items purchased: {renderItems(props.protege.items)}</h2>
-      <h2>Total spent: {props.protege.protege.expenditure}</h2>
+      <h2>Total spent: {calculateExpenditure(props.protege.items)}</h2>
       <h2>Balance: {props.protege.protege.balance}</h2>
     </>
   )
