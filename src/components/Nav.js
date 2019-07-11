@@ -19,7 +19,7 @@ import { Link} from "react-router-dom";
                   <Link to="/add">Add a new protege</Link>
                 </li>
                 <li>
-                  <Link to="/path">Another link if we need it</Link>
+                  <Link to="/create">Add new Item</Link>
                 </li>
               </ul>
             </div>

@@ -1,11 +1,12 @@
 import React from 'react';
-
+import { Link} from "react-router-dom";
 const renderItems = (items) => {
   return items.map((item, index) => {
     return (
       <div key={index}>
         <ul>
-          <li> {item.description} | $ {item.expenditure}</li>
+          <li> {item.description} | $ {item.expenditure}</li><Link to= "/edit">Edit
+          </Link>
         </ul>
       </div>
     )
