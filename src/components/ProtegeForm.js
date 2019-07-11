@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {Redirect} from 'react-router-dom'
 import axios from 'axios'
 
-
 class ProtegeForm extends Component {
     
   constructor(props) {
@@ -12,7 +11,7 @@ class ProtegeForm extends Component {
             protegename: '',
             protegeemail: '',
             expenditure: '',
-            balance: '1000',
+            balance: 1000,
             date: '', 
             adding: true
         };
