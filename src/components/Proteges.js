@@ -7,6 +7,7 @@ const renderProteges = (proteges) => {
       <div key={index}>
         <h2>{protege.protegename}</h2>
         <ul>
+          <li>Email: {protege.protegeemail}</li>
           <li>Expenditure: {protege.expenditure}</li>
           <li>Balance: {protege.balance}</li>
           <li><Link to={"/proteges/"+protege._id}>View/edit</Link></li>
