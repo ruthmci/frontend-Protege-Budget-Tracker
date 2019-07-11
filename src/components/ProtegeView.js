@@ -4,7 +4,6 @@ const renderItems = (items) => {
   return items.map((item, index) => {
     return (
       <div key={index}>
-        {/* <h2>{item.protegename}</h2> */}
         <ul>
           <li> {item.description} | $ {item.expenditure}</li><Link to= "/edit">Edit
           </Link>
@@ -13,12 +12,6 @@ const renderItems = (items) => {
     )
   })
 } 
-
-// meals.reduce((totalCalories, meal) => totalCalories + meal.calorie, 0)
-
-// this.state.meals.reduce((accumulator, currentValue)=> accumulator + accumulator, currentValue.calorie,0);
-
-// const convertedtoInt = (items) => items.map((item, index) => parseInt(item.expenditure, 10))
 
 const calculateExpenditure = (items) => items.reduce((total, item) => total + item.expenditure, 0)
 
@@ -29,7 +22,7 @@ const ProtegeView = (props) => {
       <h1>Name: {props.protege.protege.protegename}</h1>
       <h2>Items purchased: {renderItems(props.protege.items)}</h2>
       <h2>Total spent: {calculateExpenditure(props.protege.items)}</h2>
-      <h2>Balance: {props.protege.protege.balance}</h2>
+      <h2>Balance: {1000 - calculateExpenditure(props.protege.items)}</h2>
     </>
   )
 }
