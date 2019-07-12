@@ -1,39 +1,30 @@
 import React, { Component } from 'react';
-// import {Redirect} from 'react-router-dom'
+import {Redirect} from 'react-router-dom'
 import axios from 'axios';
-
 export default class EditItem extends Component {
-  constructor(props) {
-    super(props);
+  // constructor(props) {
+  //   super(props);
 
-    this.state = {
+    state = {
       description: '',
       expenditure: '',
+      adding: true
     }
+  // } 
+  handleCancel = (e) => {
+    e.preventDefault();
+    window.location = '/proteges';
   }
 
-  // componentDidMount() {
-  //   axios.get('http://localhost:5000/proteges/')
-  //     .then(response => {
-  //       if (response.data.length > 0) {
-  //         this.setState({
-  //           proteges: response.data.map(protege => protege.protegeId),
-  //           protegeId: response.data[0].protegeId
-  //         })
-  //       }
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     })
-
-  // }
-
-  // onChangeProtegeId = (e) => {
-  //   this.setState({
-  //     protegeId: e.target.value
-  //   })
-  // }
-  
+  componentDidMount(){
+    this.setState({
+      description: this.props.location.state.item.description,
+      expenditure: this.props.location.state.item.expenditure,
+      itemId: this.props.location.state.item._id,
+      protegeId: this.props.location.state.item.protege_id
+    })
+    console.log(this.props.location.state.item)
+  }
 
   onChangeDescription = (e) => {
     this.setState({
@@ -53,25 +44,27 @@ export default class EditItem extends Component {
   //   })
   
   // }
+  
 
-  onSubmit = (e) => {
+  handleClick = (e) => {
     e.preventDefault();
 
     const item = {
       description: this.state.description,
       expenditure: this.state.expenditure,
+      itemId: this.state.itemId,
+      protegeId: this.state.protegeId
     }
     console.log('edit')
     console.log(item);
     
 
-    axios.patch('http://localhost:5000/items/update/:id', item)
+    axios.patch(`http://localhost:5000/items/update/${item.itemId}`, item)
       .then(res => console.log(res.data));
-
     window.location = '/';
   }
-
   render() {
+    if (this.state.adding === true) {
     return (
     <div>
       <h3>Edit Item </h3>
@@ -100,5 +93,9 @@ export default class EditItem extends Component {
       </form>
     </div>
     )
-  }
+  } else
+  return (
+    <Redirect to='/' />
+  )
+}
 }
