@@ -11,6 +11,7 @@ import EditItem from "./components/EditItem";
 class Routes extends React.Component {
   render() {
     const { proteges, items } = this.props
+    console.log(proteges)
     return (
       <BrowserRouter>
       <Nav />
@@ -25,7 +26,7 @@ class Routes extends React.Component {
         <Route path='/proteges/:id' component={GetProtegeData} />
         <Route path='/edit' component={EditItem} />
         <Route path="/" render={() => {
-          return <Proteges proteges={proteges} items={items}/>
+          return <Proteges proteges={proteges}/>
         }}
         />
       </Switch>

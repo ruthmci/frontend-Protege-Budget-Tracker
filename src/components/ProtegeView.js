@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link} from "react-router-dom";
+
 const renderItems = (items) => {
   return items.map((item, index) => {
     return (
@@ -17,12 +18,14 @@ const calculateExpenditure = (items) => items.reduce((total, item) => total + it
 
 const ProtegeView = (props) => {
   console.log(props)
+  const {protege, items} = props.protege
+  
   return (
     <>
-      <h1>Name: {props.protege.protege.protegename}</h1>
-      <h2>Items purchased: {renderItems(props.protege.items)}</h2>
-      <h2>Total spent: {calculateExpenditure(props.protege.items)}</h2>
-      <h2>Balance: {1000 - calculateExpenditure(props.protege.items)}</h2>
+      <h1>Name: {protege.protegename}</h1>
+      <h2>Items purchased: {renderItems(items)}</h2>
+      <h2>Total spent: {calculateExpenditure(items)}</h2>
+      <h2>Balance: {1000 - calculateExpenditure(items)}</h2>
     </>
   )
 }

@@ -69,14 +69,6 @@ class ProtegeForm extends Component {
                 placeholder="email" 
                 value={this.state.protegeemail} 
               />
-              <label htmlFor="expenditure">Expenditure</label>
-              <input 
-                onChange={this.handleChange} 
-                type="number" 
-                id="expenditure" 
-                placeholder="expenditure" 
-                value={this.state.expenditure} 
-              />
               <label htmlFor="date">Date</label>
               <input 
                 onChange={this.handleChange} 
