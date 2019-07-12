@@ -23,7 +23,7 @@ class Routes extends React.Component {
         />
         <Route path="/create" component={CreateItem} />
         <Route path='/proteges/:id' component={GetProtegeData} />
-        <Route path='/edit' component={EditItem} />
+        <Route path='/edit/' component={EditItem} />
         <Route path="/" render={() => {
           return <Proteges proteges={proteges} items={items}/>
         }}

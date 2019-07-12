@@ -71,6 +71,9 @@ export default class CreateItem extends Component {
 
     window.location = '/';
   }
+  handleCancel = (e) => {
+    window.location = '/';
+  }
 
   render() {
     return (

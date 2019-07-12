@@ -5,8 +5,15 @@ const renderItems = (items) => {
     return (
       <div key={index}>
         <ul>
-          <li> {item.description} | $ {item.expenditure}</li><Link to= "/edit">Edit
-          </Link>
+          <li> {item.description} | $ {item.expenditure}</li>
+          <Link to= {{
+            pathname: "/edit",
+            state: {
+              item,
+            }
+          }}>Edit
+          </Link> 
+          
         </ul>
       </div>
     )
@@ -23,6 +30,13 @@ const ProtegeView = (props) => {
       <h2>Items purchased: {renderItems(props.protege.items)}</h2>
       <h2>Total spent: {calculateExpenditure(props.protege.items)}</h2>
       <h2>Balance: {1000 - calculateExpenditure(props.protege.items)}</h2>
+      <Link to= {{
+            pathname: "/create",
+            state: {
+              props,
+            }
+          }}>Add Item
+          </Link> 
     </>
   )
 }
