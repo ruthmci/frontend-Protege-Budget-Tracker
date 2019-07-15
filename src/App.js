@@ -1,39 +1,66 @@
 import React from 'react';
 import './App.css';
-import Routes from './Routes'
-import axios from 'axios'
-
+import Routes from './Routes';
+import axios from 'axios';
 
 class App extends React.Component {
   state = {
-    proteges: []
-    // items: []
+    addingUser: true  
   }
   
   async componentDidMount() {
     const getProteges = 'http://localhost:5000/proteges'
-    // const getItems = 'http://localhost:5000/items'
     
     const protegeResponse = await fetch(getProteges)
     const protegeData = await protegeResponse.json()
     
-    // const itemResponse = await fetch(getItems)
-    // const itemData = await itemResponse.json()
-
     this.setState({
       proteges: protegeData,
-      // items: itemData   
+      addingUser: true
     })
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.addingUser !== this.state.addingUser) {
+      this.setState({
+        addingUser: true
+      })
+    }
+  }
+
+  addProtege = (protegeData) => {
+    const newProtege = {
+        protegename: protegeData.protegename, 
+        protegeemail: protegeData.protegeemail,
+        expenditure: protegeData.expenditure, 
+        balance: protegeData.balance
+    }
+    axios.post('http://localhost:5000/proteges/add', newProtege)
+    .then((res) => {
+      // we get protege array from state      
+      const { proteges } = this.state
+      // we change struture of new protege to match others, using res.data
+      const mutatedProtege = {
+        items: [],
+        protege: res.data
+      }
+      // we add to the state with new protege 
+      let updatedProtegeData;
+      updatedProtegeData = proteges
+      updatedProtegeData.push(mutatedProtege)
+      this.setState({
+        proteges: updatedProtegeData,
+        addingUser: false
+      })
+    })
+  }
 
   render() {
-    const { proteges } = this.state
-
-    if (proteges.length === 0) {
+    const { proteges, addingUser } = this.state
+    if (!proteges) {
       return null
     } else {
-        return <Routes proteges={proteges}/>
+        return <Routes proteges={proteges} addProtege={this.addProtege} addingUser={addingUser} />
     }
   }
 }
