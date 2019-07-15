@@ -3,27 +3,38 @@ import {Redirect} from 'react-router-dom'
 import axios from 'axios';
 
 export default class EditProtege extends Component {
-  // constructor(props) {
-  //   super(props);
-
-    state = {
-      protegename: '',
-      protegeemail: '',
-      editing: true
-    }
-  // } 
-  handleCancel = (e) => {
-    e.preventDefault();
-    window.location = '/proteges';
+  state = {
+    protegename: '',
+    protegeemail: '',
+    editing: true,
+    filledForm: false
   }
 
-  componentDidMount(){
+  handleCancel = (e) => {
+    e.preventDefault();
+    window.location = '/';
+  }
+
+  async componentDidMount() {
+    // console.log(this.props.location)
+    // this.setState({
+    //   protegename: this.props.location.state.protege.protegename,
+    //   protegeemail: this.props.location.state.protege.protegename,
+    //   protegeId: this.props.location.state.protege._id
+    // })
+    // console.log("here")
+    // console.log(this.props.location.state.protege.protegename)
+    const protegeId = this.props.match.params.id
+    console.log(protegeId)
+    const getOneProtege = `http://localhost:5000/proteges/${protegeId}`
+    const protegeResponse = await fetch(getOneProtege)
+    const protegeData = await protegeResponse.json()
+    console.log(protegeData)
     this.setState({
-      protegename: this.props.location.state.protege.protegename,
-      protegeemail: this.props.location.state.protege.protegename,
-      protegeId: this.props.location.state.protege._id
+      formFilled: true,
+      protegename: protegeData.protege.protegename,
+      protegeemail: protegeData.protege.protegeemail
     })
-    console.log(this.props.location.state.protege)
   }
 
   onChange = (e) => {
@@ -31,56 +42,53 @@ export default class EditProtege extends Component {
   }
 
   handleClick = (e) => {
-    e.preventDefault();
-
-    const protege = {
-      protegename: this.state.protegename,
-      protegeemail: this.state.protegeemail,
-      protegeId: this.state.protegeId
-    }
-    console.log('edit')
-    console.log(protege);
-    
-
-    axios.patch(`http://localhost:5000/proteges/update/${protege.protegeId}`, protege)
-      .then(res => console.log(res.data));
-    window.location = '/';
+    e.preventDefault()
+    // call func
+    this.props.updateProtege(this.state.protegename, this.state.protegeemail, this.props.match.params.id)
   }
-  render() {
-    if (this.state.edit === true) {
-    return (
-    <div>
-      <h3>Edit Protege </h3>
-      <form onSubmit={this.onSubmit}>
-        <div className="form-group"> 
-          <label>Description: </label>
-          <input  type="text"
-              required
-              id="protegename" 
-              className="form-control"
-              value={this.state.protegename}
-              onChange={this.onChange}
-              />
-        </div>
-        <div className="form-group">
-          <label>Email: </label>
-          <input 
-              type="text" 
-              id="protegeemail"
-              className="form-control"
-              value={this.state.protegeemail}
-              onChange={this.onChange}
-              />
-        </div>
 
-        <button onClick={this.handleClick}>Update</button>
-        <button onClick={this.handleCancel}>Cancel</button>
-      </form>
-    </div>
-    )
-  } else
-  return (
-    <Redirect to='/' />
-  )
-}
+  
+  render() {
+    const { formFilled } = this.state
+    console.log(this.props)
+    if (!formFilled) {
+      return null
+    } else if (this.props.updatingDone) {
+      return (
+        <Redirect to={`/proteges/${this.props.match.params.id}`} />
+      )
+    } else {
+        return (
+          <div>
+            <h3>Edit Protege 
+            </h3>
+            <form onSubmit={this.onSubmit}>
+              <div className="form-group"> 
+                <label>Name: </label>
+                <input  type="text"
+                    required
+                    id="protegename" 
+                    className="form-control"
+                    value={this.state.protegename}
+                    onChange={this.onChange}
+                    />
+              </div>
+              <div className="form-group">
+                <label>Email: </label>
+                <input 
+                    type="text" 
+                    id="protegeemail"
+                    className="form-control"
+                    value={this.state.protegeemail}
+                    onChange={this.onChange}
+                    />
+              </div>
+      
+              <button onClick={this.handleClick}>Update</button>
+              <button onClick={this.handleCancel}>Cancel</button>
+            </form>
+          </div>
+        )
+    }
+  }
 }
