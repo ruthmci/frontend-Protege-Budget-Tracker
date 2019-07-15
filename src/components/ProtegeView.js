@@ -22,7 +22,7 @@ const renderItems = (items) => {
             state: {
               item,
             }
-          }}>Delete
+          }}>Delete Item
           </Link> 
           {/* {console.log('item')} */}
         {/* {console.log(item)} */}
@@ -53,9 +53,9 @@ const deleteProtege = (e, protege, items) => {
 
 
 const ProtegeView = (props) => {
-  console.log(props)
+  // console.log(props)
   const {protege, items} = props.protege
-  
+  console.log(protege)
   return (
     <>
       <h1>Name: {protege.protegename}</h1>
@@ -71,11 +71,9 @@ const ProtegeView = (props) => {
           </Link> 
           <p></p>
           <Link to= {{
-            pathname: "/editprotege/",
-            state: {
-              protege
-            }
-          }}>Edit protege details
+            pathname: `/editprotege/${protege._id}`
+          }}>
+          Edit protege details
           </Link> 
           <p></p>
           <button type="submit" onClick={e => {if (window.confirm('Are you sure you want to delete')) deleteProtege(e, protege, items)}}>

@@ -13,7 +13,7 @@ export default class EditItem extends Component {
   // } 
   handleCancel = (e) => {
     e.preventDefault();
-    window.location = '/proteges';
+    window.location = '/';
   }
 
   componentDidMount(){
@@ -67,7 +67,7 @@ export default class EditItem extends Component {
     if (this.state.adding === true) {
     return (
     <div>
-      <h3>Edit </h3>
+      <h3>Edit Item </h3>
       <form onSubmit={this.onSubmit}>
         <div className="form-group"> 
           <label>Description: </label>

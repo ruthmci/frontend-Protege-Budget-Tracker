@@ -25,7 +25,9 @@ class Routes extends React.Component {
         <Route path="/add" render={() => {
           return <CreateProtege addProtege={this.props.addProtege} addingUser={this.props.addingUser} />
         }} />
-        <Route path='/editprotege/' component={EditProtege} />
+        <Route path='/editprotege/:id' render={(routeProps) => {
+          return <EditProtege updateProtege={this.props.updateProtege} updatingDone={this.props.updatingDone} {...routeProps} /> }
+        } />
         
         <Route path="/create" component={CreateItem} />
         <Route path='/edit/' component={EditItem} />

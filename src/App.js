@@ -5,7 +5,8 @@ import axios from 'axios';
 
 class App extends React.Component {
   state = {
-    addingUser: true  
+    addingUser: true,
+    updatingDone: null
   }
   
   async componentDidMount() {
@@ -19,6 +20,19 @@ class App extends React.Component {
       addingUser: true
     })
   }
+
+  updateProtege = (name, email, id) => {
+    const protege = {
+      protegename: name,
+      protegeemail: email
+    }
+    axios.patch(`http://localhost:5000/proteges/update/${id}`, protege)
+      .then((res) => {
+        this.setState({
+          updatingDone: true
+        })
+      });
+    }
 
   componentDidUpdate(prevProps, prevState) {
     if (prevState.addingUser !== this.state.addingUser) {
@@ -61,7 +75,7 @@ class App extends React.Component {
     if (!proteges) {
       return null
     } else {
-        return <Routes proteges={proteges} addProtege={this.addProtege} addingUser={addingUser} />
+        return <Routes proteges={proteges} addProtege={this.addProtege} addingUser={addingUser} updateProtege={this.updateProtege} updatingDone={this.state.updatingDone} />
     }
   }
 }
