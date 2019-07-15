@@ -1,60 +1,42 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom'
-import axios from 'axios'
+// import axios from 'axios'
 
 
 class CreateProtege extends Component {
-    
-  constructor(props) {
-        super(props);
-        
-        this.state = { 
-            protegename: '',
-            protegeemail: '',
-            expenditure: '',
-            balance: 1000,
-            date: '',
-            data: '', 
-            adding: true
-        };
-      }
+  state = { 
+    protegename: '',
+    protegeemail: '',
+    expenditure: '',
+    balance: 1000,
+    addingUser: true
+  }
 
-
-    handleClick = (e) => {
-      e.preventDefault();
-      const newProtege = {
-          protegename: this.state.protegename, 
-          protegeemail: this.state.protegeemail,
-          expenditure: this.state.expenditure, 
-          balance: this.state.balance,
-          date: this.state.date
-      }
-      console.log(newProtege)
-
-      axios.post('http://localhost:5000/proteges/add', newProtege)
-      .then((res) => {
-        console.log(res)
-        // this.setState ({data: res.data})
-      })
-        
-    this.setState({
-          adding: false
-      })
-
+  handleClick = (e) => {
+    e.preventDefault()
+    const protegeData = {
+      protegename: this.state.protegename,
+      protegeemail: this.state.protegeemail,
+      expenditure: this.state.expenditure,
+      balance: this.state.balance
     }
+    this.props.addProtege(protegeData)
+  }
 
-    handleCancel = (e) => {
-      e.preventDefault();
-      window.location = '/proteges';
-    }
+  handleCancel = (e) => {
+    e.preventDefault();
+    window.location = '/proteges';
+  }
 
   handleChange = (e) => {
     this.setState({ [e.target.id]: e.target.value})
   }
 
   render(){
-    // console.log(this.state);
-    if (this.state.adding === true) {
+    // console.log(this.props.addingUser)
+    if (!this.props.addingUser) {
+      return <Redirect to='/' />
+    } else {
       return (
         <div className="protege-form">
           <h1>Protege form</h1>
@@ -79,11 +61,8 @@ class CreateProtege extends Component {
               <button onClick={this.handleCancel}>Cancel</button>
           </form>
         </div>
-      );
-    } else
-    return (
-      <Redirect to={`/proteges/`} />
-    )
+      )
+    }
   }
 }
 
