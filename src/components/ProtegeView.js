@@ -15,8 +15,17 @@ const renderItems = (items) => {
               item,
             }
           }}>Edit
+          </Link>  
+          <br/>
+          <Link to= {{
+            pathname: "/delete",
+            state: {
+              item,
+            }
+          }}>Delete
           </Link> 
-          
+          {console.log('item')}
+        {console.log(item)}
         </ul>
       </div>
     )

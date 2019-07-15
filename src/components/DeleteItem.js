@@ -26,28 +26,10 @@ export default class EditItem extends Component {
     console.log(this.props.location.state.item)
   }
 
-  onChangeDescription = (e) => {
-    this.setState({
-      description: e.target.value
-    })
-  }
-
-  onChangeExpenditure = (e) => {
-    this.setState({
-      expenditure: e.target.value
-    })
-  }
-
-  // onChangeDate = (date) => {
-  //   this.setState({
-  //     date: date
-  //   })
-  
-  // }
-  
 
   handleClick = (e) => {
     e.preventDefault();
+   
 
     const item = {
       description: this.state.description,
@@ -59,39 +41,18 @@ export default class EditItem extends Component {
     console.log(item);
     
 
-    axios.patch(`http://localhost:5000/items/update/${item.itemId}`, item)
+    axios.delete(`http://localhost:5000/items/${item.itemId}`, item)
       .then(res => console.log(res.data));
     window.location = '/';
   }
   render() {
     if (this.state.adding === true) {
     return (
-    <div>
-      <h3>Edit </h3>
-      <form onSubmit={this.onSubmit}>
-        <div className="form-group"> 
-          <label>Description: </label>
-          <input  type="text"
-              required
-              className="form-control"
-              value={this.state.description}
-              onChange={this.onChangeDescription}
-              />
-        </div>
-        <div className="form-group">
-          <label>Expenditure: </label>
-          <input 
-              type="text" 
-              className="form-control"
-              value={this.state.expenditure}
-              onChange={this.onChangeExpenditure}
-              />
-        </div>
-
-        <button onClick={this.handleClick}>Update</button>
+      <>
+      <h3> Are you sure you want to delete?</h3>
+        <button onClick={this.handleClick}>Delete</button>
         <button onClick={this.handleCancel}>Cancel</button>
-      </form>
-    </div>
+        </>
     )
   } else
   return (

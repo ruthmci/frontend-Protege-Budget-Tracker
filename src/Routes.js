@@ -5,6 +5,7 @@ import GetProtegeData from './components/GetProtegeData'
 import Items from './components/Items'
 import CreateItem from "./components/CreateItem";
 import EditItem from "./components/EditItem";
+import DeleteItem from "./components/DeleteItem";
 import Proteges from './components/Proteges'
 import CreateProtege from './components/CreateProtege';
 import EditProtege from './components/EditProtege';
@@ -28,6 +29,7 @@ class Routes extends React.Component {
         
         <Route path="/create" component={CreateItem} />
         <Route path='/edit/' component={EditItem} />
+        <Route path='/delete/' component={DeleteItem} />
         <Route exact path="/" render={() => {
           return <Proteges proteges={proteges} />
         }}/>
