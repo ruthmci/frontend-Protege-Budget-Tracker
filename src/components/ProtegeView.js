@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link} from "react-router-dom";
+import axios from 'axios';
+
 
 const renderItems = (items) => {
   return items.map((item, index) => {
@@ -13,8 +15,17 @@ const renderItems = (items) => {
               item,
             }
           }}>Edit
+          </Link>  
+          <br/>
+          <Link to= {{
+            pathname: "/delete",
+            state: {
+              item,
+            }
+          }}>Delete
           </Link> 
-          
+          {console.log('item')}
+        {console.log(item)}
         </ul>
       </div>
     )
