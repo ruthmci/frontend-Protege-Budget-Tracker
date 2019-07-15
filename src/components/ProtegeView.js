@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from 'axios'
 
 
@@ -24,8 +24,8 @@ const renderItems = (items) => {
             }
           }}>Delete
           </Link> 
-          {console.log('item')}
-        {console.log(item)}
+          {/* {console.log('item')} */}
+        {/* {console.log(item)} */}
         </ul>
       </div>
     )
@@ -34,16 +34,21 @@ const renderItems = (items) => {
 
 const calculateExpenditure = (items) => items.reduce((total, item) => total + item.expenditure, 0)
 
-
-const deleteProtege = (e, protege) => {
+const deleteProtege = (e, protege, items) => {
   e.preventDefault();
-  console.log(protege) 
-  
-  axios.delete(`http://localhost:5000/proteges/${protege._id}`).then (res => {
-    if (res.ok) {
-      return <Redirect to="/proteges"/>
+  console.log(protege)
+  console.log(items)
+  if (items.length !== 0) {
+    return window.alert('Please delete all items before you delete the protege')
   }
-})
+    else {
+      axios.delete(`http://localhost:5000/proteges/${protege._id}`)
+    .then (res => {
+      console.log(res)
+    if (res.status === 200) {
+      window.location = '/';
+    }})
+  } 
 }
 
 
@@ -73,8 +78,8 @@ const ProtegeView = (props) => {
           }}>Edit protege details
           </Link> 
           <p></p>
-          <button type="submit" onClick={e => deleteProtege(e, protege)}>
-              Delete
+          <button type="submit" onClick={e => {if (window.confirm('Are you sure you want to delete')) deleteProtege(e, protege, items)}}>
+              Delete protege
             </button>
     </>
   )

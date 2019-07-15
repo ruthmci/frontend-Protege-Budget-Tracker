@@ -26,6 +26,7 @@ class App extends React.Component {
         addingUser: true
       })
     }
+
   }
 
   addProtege = (protegeData) => {
