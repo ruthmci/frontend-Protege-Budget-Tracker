@@ -1,5 +1,7 @@
 import React from 'react';
-import { Link} from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
+import axios from 'axios'
+
 
 const renderItems = (items) => {
   return items.map((item, index) => {
@@ -23,6 +25,19 @@ const renderItems = (items) => {
 
 const calculateExpenditure = (items) => items.reduce((total, item) => total + item.expenditure, 0)
 
+
+const deleteProtege = (e, protege) => {
+  e.preventDefault();
+  console.log(protege) 
+  
+  axios.delete(`http://localhost:5000/proteges/${protege._id}`).then (res => {
+    if (res.ok) {
+      return <Redirect to="/proteges"/>
+  }
+})
+}
+
+
 const ProtegeView = (props) => {
   console.log(props)
   const {protege, items} = props.protege
@@ -36,10 +51,22 @@ const ProtegeView = (props) => {
       <Link to= {{
             pathname: "/create",
             state: {
-              props,
+              props
             }
           }}>Add Item
           </Link> 
+          <p></p>
+          <Link to= {{
+            pathname: "/editprotege/",
+            state: {
+              protege
+            }
+          }}>Edit protege details
+          </Link> 
+          <p></p>
+          <button type="submit" onClick={e => deleteProtege(e, protege)}>
+              Delete
+            </button>
     </>
   )
 }
