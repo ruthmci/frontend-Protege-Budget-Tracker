@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import {Redirect} from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 import axios from 'axios'
 
-class ProtegeForm extends Component {
+
+class CreateProtege extends Component {
     
   constructor(props) {
         super(props);
@@ -12,7 +13,8 @@ class ProtegeForm extends Component {
             protegeemail: '',
             expenditure: '',
             balance: 1000,
-            date: '', 
+            date: '',
+            data: '', 
             adding: true
         };
       }
@@ -30,16 +32,20 @@ class ProtegeForm extends Component {
       console.log(newProtege)
 
       axios.post('http://localhost:5000/proteges/add', newProtege)
-      .then(res => console.log(res.data));
-
-      this.setState({
-          protegename: '',
-          protegeemail: '',
-          expenditure: '', 
-          balance: '',
-          date: '', 
+      .then((res) => {
+        console.log(res)
+        // this.setState ({data: res.data})
+      })
+        
+    this.setState({
           adding: false
       })
+
+    }
+
+    handleCancel = (e) => {
+      e.preventDefault();
+      window.location = '/proteges';
     }
 
   handleChange = (e) => {
@@ -69,26 +75,17 @@ class ProtegeForm extends Component {
                 placeholder="email" 
                 value={this.state.protegeemail} 
               />
-              <label htmlFor="date">Date</label>
-              <input 
-                onChange={this.handleChange} 
-                type="date" 
-                id="date" 
-                placeholder="date" 
-                value={this.state.date} 
-              />
-
               <button onClick={this.handleClick}>Save</button>
               <button onClick={this.handleCancel}>Cancel</button>
           </form>
         </div>
       );
     } else
-      return (
-        <Redirect to='/' />
-      )
-    }
+    return (
+      <Redirect to={`/proteges/`} />
+    )
+  }
 }
 
 
-  export default ProtegeForm;
+  export default CreateProtege;
