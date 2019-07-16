@@ -34,14 +34,7 @@ class App extends React.Component {
       });
     }
 
-  componentDidUpdate(prevProps, prevState) {
-    if (prevState.addingUser !== this.state.addingUser) {
-      this.setState({
-        addingUser: true
-      })
-    }
-
-  }
+  
 
   addProtege = (protegeData) => {
     const newProtege = {
@@ -75,6 +68,7 @@ class App extends React.Component {
     if (!proteges) {
       return null
     } else {
+     
         return <Routes proteges={proteges} addProtege={this.addProtege} addingUser={addingUser} updateProtege={this.updateProtege} updatingDone={this.state.updatingDone} />
     }
   }

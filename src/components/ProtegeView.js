@@ -59,6 +59,7 @@ const ProtegeView = (props) => {
   return (
     <>
       <h1>Name: {protege.protegename}</h1>
+      <h2>Email:{protege.protegeemail}</h2>
       <h2>Items purchased: {renderItems(items)}</h2>
       <h2>Total spent: {calculateExpenditure(items)}</h2>
       <h2>Balance: {1000 - calculateExpenditure(items)}</h2>
@@ -79,7 +80,10 @@ const ProtegeView = (props) => {
           <button type="submit" onClick={e => {if (window.confirm('Are you sure you want to delete')) deleteProtege(e, protege, items)}}>
               Delete protege
             </button>
+            
+
     </>
+    
   )
 }
 

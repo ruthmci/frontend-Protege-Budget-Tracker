@@ -7,7 +7,8 @@ export default class EditProtege extends Component {
     protegename: '',
     protegeemail: '',
     editing: true,
-    filledForm: false
+    filledForm: false,
+    updatingDone: true
   }
 
   handleCancel = (e) => {
@@ -36,6 +37,13 @@ export default class EditProtege extends Component {
       protegeemail: protegeData.protege.protegeemail
     })
   }
+  componentDidUpdate() {
+    console.log('componentupdate')
+    console.log(this.state.updatingDone)
+    this.setState({
+      // updatingDone:null
+    })
+  }
 
   onChange = (e) => {
     this.setState({ [e.target.id]: e.target.value})
@@ -44,18 +52,21 @@ export default class EditProtege extends Component {
   handleClick = (e) => {
     e.preventDefault()
     // call func
-    this.props.updateProtege(this.state.protegename, this.state.protegeemail, this.props.match.params.id)
-  }
-
-  
-  render() {
+    this.props.updateProtege(this.state.protegename, this.state.protegeemail, this.props.match.params.id)}
+   
+    render() {
+    
     const { formFilled } = this.state
     console.log(this.props)
     if (!formFilled) {
       return null
-    } else if (this.props.updatingDone) {
+    } else if (this.props.updatingDone === true) {
       return (
+        <>
         <Redirect to={`/proteges/${this.props.match.params.id}`} />
+        {console.log(this.props.updatingDone)}
+        </>
+        
       )
     } else {
         return (
@@ -91,4 +102,5 @@ export default class EditProtege extends Component {
         )
     }
   }
+ 
 }
