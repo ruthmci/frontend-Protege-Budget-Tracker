@@ -22,17 +22,17 @@ class Routes extends React.Component {
         }}
         />
         <Route path='/proteges/:id' component={GetProtegeData} />
-        <Route path="/add" render={() => {
+        <Route path='/add' render={() => {
           return <CreateProtege addProtege={this.props.addProtege} addingUser={this.props.addingUser} />
         }} />
         <Route path='/editprotege/:id' render={(routeProps) => {
           return <EditProtege updateProtege={this.props.updateProtege} updatingDone={this.props.updatingDone} {...routeProps} /> }
         } />
         
-        <Route path="/create" component={CreateItem} />
+        <Route path='/create/:id' component={CreateItem} />
         <Route path='/edit/' component={EditItem} />
         <Route path='/delete/' component={DeleteItem} />
-        <Route exact path="/" render={() => {
+        <Route exact path='/' render={() => {
           return <Proteges proteges={proteges} />
         }}/>
       </Switch>

@@ -25,7 +25,7 @@ class CreateProtege extends Component {
 
   handleCancel = (e) => {
     e.preventDefault();
-    window.location = '/proteges';
+    window.location = '/';
   }
 
   handleChange = (e) => {

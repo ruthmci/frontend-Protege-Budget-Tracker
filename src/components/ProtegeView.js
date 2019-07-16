@@ -55,7 +55,7 @@ const deleteProtege = (e, protege, items) => {
 const ProtegeView = (props) => {
   // console.log(props)
   const {protege, items} = props.protege
-  console.log(protege)
+  // console.log(protege)
   return (
     <>
       <h1>Name: {protege.protegename}</h1>
@@ -63,10 +63,7 @@ const ProtegeView = (props) => {
       <h2>Total spent: {calculateExpenditure(items)}</h2>
       <h2>Balance: {1000 - calculateExpenditure(items)}</h2>
       <Link to= {{
-            pathname: "/create",
-            state: {
-              props
-            }
+            pathname: `/create/${protege._id}`,
           }}>Add Item
           </Link> 
           <p></p>

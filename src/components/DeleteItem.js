@@ -13,7 +13,7 @@ export default class EditItem extends Component {
   // } 
   handleCancel = (e) => {
     e.preventDefault();
-    window.location = '/proteges';
+    window.location = `/proteges/${this.props.location.state.item.protege_id}`;
   }
 
   componentDidMount(){
