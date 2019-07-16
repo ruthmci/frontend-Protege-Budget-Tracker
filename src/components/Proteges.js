@@ -1,3 +1,5 @@
+// Renders a list of all proteges with details, using props passed down through Routes from App.js
+
 import React from 'react';
 import { Link } from "react-router-dom";
 

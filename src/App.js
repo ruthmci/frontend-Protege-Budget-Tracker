@@ -4,14 +4,15 @@ import Routes from './Routes';
 import axios from 'axios';
 
 class App extends React.Component {
+  // These states allow for conditional rendering of the forms
   state = {
     addingUser: true,
     updatingDone: null
   }
   
+  // Gets all the protege data on mount and sets it in state
   async componentDidMount() {
     const getProteges = 'http://localhost:5000/proteges'
-    
     const protegeResponse = await fetch(getProteges)
     const protegeData = await protegeResponse.json()
     
@@ -21,6 +22,7 @@ class App extends React.Component {
     })
   }
 
+  // Function used by the Update Protege Component to send an update request using the data and set the updating state to true
   updateProtege = (name, email, id) => {
     const protege = {
       protegename: name,
@@ -34,6 +36,7 @@ class App extends React.Component {
       });
     }
 
+    // Ensures the state toggles back so the CreateProtege form will show when needed again
   componentDidUpdate(prevProps, prevState) {
     if (prevState.addingUser !== this.state.addingUser) {
       this.setState({
@@ -43,6 +46,7 @@ class App extends React.Component {
 
   }
 
+  // This function is called by CreateProtege component
   addProtege = (protegeData) => {
     const newProtege = {
         protegename: protegeData.protegename, 
@@ -70,6 +74,7 @@ class App extends React.Component {
     })
   }
 
+  
   render() {
     const { proteges, addingUser } = this.state
     if (!proteges) {

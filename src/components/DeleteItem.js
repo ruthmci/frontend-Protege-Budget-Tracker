@@ -1,16 +1,16 @@
+// Component used for deleting an item
+
 import React, { Component } from 'react';
 import {Redirect} from 'react-router-dom'
 import axios from 'axios';
 export default class EditItem extends Component {
-  // constructor(props) {
-  //   super(props);
-
+ 
     state = {
       description: '',
       expenditure: '',
       adding: true
     }
-  // } 
+  
   handleCancel = (e) => {
     e.preventDefault();
     window.location = `/proteges/${this.props.location.state.item.protege_id}`;

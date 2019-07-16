@@ -1,6 +1,7 @@
+// Component for creating a protege
+
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom'
-// import axios from 'axios'
 
 
 class CreateProtege extends Component {
@@ -11,6 +12,8 @@ class CreateProtege extends Component {
     balance: 1000,
     addingUser: true
   }
+
+  // HandleClick collects the information from state (via the form) and sends it to the addProtege function, which has been passed in from App.js
 
   handleClick = (e) => {
     e.preventDefault()
@@ -32,6 +35,7 @@ class CreateProtege extends Component {
     this.setState({ [e.target.id]: e.target.value})
   }
 
+  // The form renders if the addingUser state is false. addingUser is set in App.js
   render(){
     // console.log(this.props.addingUser)
     if (!this.props.addingUser) {

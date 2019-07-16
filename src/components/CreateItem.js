@@ -1,8 +1,11 @@
+// Component for creating an item
+
 import React, { Component } from 'react';
 import axios from 'axios';
 
 export default class CreateItem extends Component {
   
+  // protege id is picked up from url
   state = {
       protegeId: this.props.match.params.id,
       description: '',
@@ -20,7 +23,7 @@ export default class CreateItem extends Component {
 
   onSubmit = (e) => {
     e.preventDefault();
-
+    // collects data from state, sends post request and redirects back to the page where the protege where the item was added
     const newItem = {
       protegeId: this.state.protegeId,
       description: this.state.description,
@@ -32,10 +35,10 @@ export default class CreateItem extends Component {
 
     axios.post('http://localhost:5000/items/add', newItem)
       .then(res => console.log(res.data));
-
-    window.location = `/proteges/${this.props.match.params.id}`;
+      window.location = `/proteges/${this.props.match.params.id}`;
   }
 
+  // Form for collecting item data
   render() {
     return (
     <div>
