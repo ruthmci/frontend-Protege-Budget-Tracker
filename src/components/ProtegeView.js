@@ -24,8 +24,6 @@ const renderItems = (items) => {
             }
           }}>Delete Item
           </Link> 
-          {/* {console.log('item')} */}
-        {/* {console.log(item)} */}
         </ul>
       </div>
     )

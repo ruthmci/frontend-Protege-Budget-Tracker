@@ -35,14 +35,6 @@ export default class EditItem extends Component {
     })
   }
 
-  // onChangeDate = (date) => {
-  //   this.setState({
-  //     date: date
-  //   })
-  
-  // }
-  
-
   handleClick = (e) => {
     e.preventDefault();
 
@@ -58,7 +50,7 @@ export default class EditItem extends Component {
 
     axios.patch(`http://localhost:5000/items/update/${item.itemId}`, item)
       .then(res => console.log(res.data));
-    window.location = '/';
+    window.location = `/proteges/${this.props.location.state.item.protege_id}`;
   }
   render() {
     if (this.state.adding === true) {

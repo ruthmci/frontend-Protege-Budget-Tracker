@@ -43,7 +43,7 @@ export default class EditItem extends Component {
 
     axios.delete(`http://localhost:5000/items/${item.itemId}`, item)
       .then(res => console.log(res.data));
-    window.location = '/';
+    window.location = `/proteges/${this.state.protegeId}`;
   }
   render() {
     if (this.state.adding === true) {
