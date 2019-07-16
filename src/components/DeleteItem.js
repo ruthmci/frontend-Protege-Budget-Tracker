@@ -1,19 +1,19 @@
+// Component used for deleting an item
+
 import React, { Component } from 'react';
 import {Redirect} from 'react-router-dom'
 import axios from 'axios';
 export default class EditItem extends Component {
-  // constructor(props) {
-  //   super(props);
-
+ 
     state = {
       description: '',
       expenditure: '',
       adding: true
     }
-  // } 
+  
   handleCancel = (e) => {
     e.preventDefault();
-    window.location = '/proteges';
+    window.location = `/proteges/${this.props.location.state.item.protege_id}`;
   }
 
   componentDidMount(){
@@ -43,7 +43,7 @@ export default class EditItem extends Component {
 
     axios.delete(`http://localhost:5000/items/${item.itemId}`, item)
       .then(res => console.log(res.data));
-    window.location = '/';
+    window.location = `/proteges/${this.state.protegeId}`;
   }
   render() {
     if (this.state.adding === true) {

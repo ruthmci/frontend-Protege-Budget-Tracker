@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {Redirect} from 'react-router-dom'
-import axios from 'axios';
 
 export default class EditProtege extends Component {
   state = {
@@ -12,18 +11,10 @@ export default class EditProtege extends Component {
 
   handleCancel = (e) => {
     e.preventDefault();
-    window.location = '/';
+    window.location = `/proteges/${this.props.match.params.id}`;
   }
 
   async componentDidMount() {
-    // console.log(this.props.location)
-    // this.setState({
-    //   protegename: this.props.location.state.protege.protegename,
-    //   protegeemail: this.props.location.state.protege.protegename,
-    //   protegeId: this.props.location.state.protege._id
-    // })
-    // console.log("here")
-    // console.log(this.props.location.state.protege.protegename)
     const protegeId = this.props.match.params.id
     console.log(protegeId)
     const getOneProtege = `http://localhost:5000/proteges/${protegeId}`

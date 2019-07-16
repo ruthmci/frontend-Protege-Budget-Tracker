@@ -1,7 +1,10 @@
+// This component contains the functions responsible for rendering the 'View protege' page
+
 import React from 'react';
 import { Link } from "react-router-dom";
 import axios from 'axios'
 
+// Renders the purchased items as a list. Called in the ProtegeView function below.
 
 const renderItems = (items) => {
   return items.map((item, index) => {
@@ -24,16 +27,16 @@ const renderItems = (items) => {
             }
           }}>Delete Item
           </Link> 
-          {/* {console.log('item')} */}
-        {/* {console.log(item)} */}
         </ul>
       </div>
     )
   })
 } 
 
+// This function calculates the total Expenditure by adding the expenditure of each item. Called in the ProtegeView function below
 const calculateExpenditure = (items) => items.reduce((total, item) => total + item.expenditure, 0)
 
+// This function validates the protege has no purchases before deleting the protege
 const deleteProtege = (e, protege, items) => {
   e.preventDefault();
   console.log(protege)
@@ -51,11 +54,11 @@ const deleteProtege = (e, protege, items) => {
   } 
 }
 
+// Renders a page with one protege's details, using props passed down to it from the GetProtegeData component. This function calls the renderItems and the calculateExpenditure Functions
+// It also calls the deleteProtege function on click
 
 const ProtegeView = (props) => {
-  // console.log(props)
   const {protege, items} = props.protege
-  console.log(protege)
   return (
     <>
       <h1>Name: {protege.protegename}</h1>
@@ -63,10 +66,7 @@ const ProtegeView = (props) => {
       <h2>Total spent: {calculateExpenditure(items)}</h2>
       <h2>Balance: {1000 - calculateExpenditure(items)}</h2>
       <Link to= {{
-            pathname: "/create",
-            state: {
-              props
-            }
+            pathname: `/create/${protege._id}`,
           }}>Add Item
           </Link> 
           <p></p>
