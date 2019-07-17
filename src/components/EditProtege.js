@@ -46,7 +46,9 @@ export default class EditProtege extends Component {
       return null
     } else if (this.props.updatingDone) {
       return (
-        <Redirect to={`/proteges/${this.props.match.params.id}`} />
+        <Redirect to={{
+          pathname: `/proteges/${this.props.match.params.id}`
+        }} />
       )
     } else {
         return (

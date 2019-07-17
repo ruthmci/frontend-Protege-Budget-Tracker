@@ -31,7 +31,8 @@ class App extends React.Component {
     axios.patch(`http://localhost:5000/proteges/update/${id}`, protege)
       .then((res) => {
         this.setState({
-          updatingDone: true
+          updatingDone: true,
+          proteges: res.data.proteges
         })
       });
     }
@@ -43,7 +44,11 @@ class App extends React.Component {
         addingUser: true
       })
     }
-
+    if (prevState.updatingDone !== this.state.updatingDone) {
+      this.setState({
+        updatingDone: false
+      })
+    }
   }
 
   // This function is called by CreateProtege component
