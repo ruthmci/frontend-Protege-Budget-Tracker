@@ -34,8 +34,11 @@ export default class CreateItem extends Component {
     console.log(newItem);
 
     axios.post('http://localhost:5000/items/add', newItem)
-      .then(res => console.log(res.data));
-      window.location = `/proteges/${this.props.match.params.id}`;
+      .then((res) => {
+        console.log(res.data)
+        window.location = `/proteges/${this.props.match.params.id}`
+      })
+      .catch(err => console.log(err.response.data.messages))
   }
 
   // Form for collecting item data
@@ -47,7 +50,7 @@ export default class CreateItem extends Component {
         <div className="form-group"> 
           <label>Description: </label>
           <input  type="text"
-              required
+              // required
               id="description"
               className="form-control"
               value={this.state.description}
@@ -58,7 +61,7 @@ export default class CreateItem extends Component {
           <label>Expenditure: </label>
           <input 
               type="text" 
-              required
+              // required
               id="expenditure"
               className="form-control"
               value={this.state.expenditure}

@@ -34,10 +34,11 @@ class App extends React.Component {
           updatingDone: true,
           proteges: res.data.proteges
         })
-      });
+      })
+      .catch(err => console.log(err.response.data.messages))
     }
 
-    // Ensures the state toggles back so the CreateProtege form will show when needed again
+    // Ensures the state toggles back so the CreateProtege and updating protege form will show when needed again
   componentDidUpdate(prevProps, prevState) {
     if (prevState.addingUser !== this.state.addingUser) {
       this.setState({
@@ -77,6 +78,7 @@ class App extends React.Component {
         addingUser: false
       })
     })
+    .catch(err => console.log(err.response.data.messages))
   }
 
   
