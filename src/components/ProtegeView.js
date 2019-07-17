@@ -45,7 +45,7 @@ const deleteProtege = (e, protege, items) => {
     return window.alert('Please delete all items before you delete the protege')
   }
     else {
-      axios.delete(`http://localhost:5000/proteges/${protege._id}`)
+      axios.delete(`${process.env.REACT_APP_BACKEND_URL}/proteges/${protege._id}`)
     .then (res => {
       console.log(res)
     if (res.status === 200) {

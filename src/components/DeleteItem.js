@@ -41,7 +41,7 @@ export default class EditItem extends Component {
     console.log(item);
     
 
-    axios.delete(`http://localhost:5000/items/${item.itemId}`, item)
+    axios.delete(`${process.env.REACT_APP_BACKEND_URL}/items/${item.itemId}`, item)
       .then(res => console.log(res.data));
     window.location = `/proteges/${this.state.protegeId}`;
   }

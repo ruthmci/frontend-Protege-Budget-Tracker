@@ -17,7 +17,7 @@ export default class EditProtege extends Component {
   async componentDidMount() {
     const protegeId = this.props.match.params.id
     console.log(protegeId)
-    const getOneProtege = `http://localhost:5000/proteges/${protegeId}`
+    const getOneProtege = `${process.env.REACT_APP_BACKEND_URL}/proteges/${protegeId}`
     const protegeResponse = await fetch(getOneProtege)
     const protegeData = await protegeResponse.json()
     console.log(protegeData)

@@ -33,7 +33,7 @@ export default class CreateItem extends Component {
 
     console.log(newItem);
 
-    axios.post('http://localhost:5000/items/add', newItem)
+    axios.post(`${process.env.REACT_APP_BACKEND_URL}/items/add`, newItem)
       .then(res => console.log(res.data));
       window.location = `/proteges/${this.props.match.params.id}`;
   }
