@@ -1,11 +1,13 @@
 
 
-Client Meeting 05/07/19 through Skype 
+Client Meeting 05/07/19 through Skype.
+
 Mark gave us a brief description of an idea he has for an app.
 He currently uses excel to monitor the annual learning budget for each protege. He receives an email, usually through slack requesting money for a book or conference. He must check that there is money available in the budget and then he adds the item, the amount and date to a the protege table. He wants an app where he can achieve all these things without having to use excel.
 
 
-Client Meeting 12/07/19 through Skype 
+Client Meeting 12/07/19 through Skype.
+
 Sent Mark through our wireframes to get some feedback with the direction we are going.
 Questions: Does every protege get a fixed budget? Yes.
 Is there branding regulations we should follow? Identikit is available on intranet with all details.
@@ -20,43 +22,43 @@ We confirmed MVP needs to be
 Figma boards are signed off.
 Nice to have if we have time after we reach MVP
 -   login with authentication
-show previous year transactions with edit functions
-incorporate this app into a backend API that was built for Mark previously and holds data on all proteges (as well as their rotation details)
+-   show previous year transactions with edit functions
+-   incorporate this app into a backend API that was built for Mark previously and holds data on all proteges (as well as their rotation details)
 -  get API data
 -  compare against your database to see if there are any proteges in the API data that aren't in your database
-- if there are, add new protege to database using API details (name, email) and give default budget of $1000
+-  if there are, add new protege to database using API details (name, email) and give default budget of $1000
 
 
 User Stores
 I am a protege manager, I want to;
 
-Keep a record of all the proteges and their purchases in the program 
-See an overview of total spent in the FMA
-See a detailed view of the total spend of individual proteges
-Track the protege learning budget
-View individual protege details
-See the overview for each protege
-Analyse how the proteges are spending , sort purchases by category and by amount
-Log amount spent by individual proteges
-I want to create a new protege
-I want to update a protege details
-I want to sort purchases by category or by spend
-Delete protege from view/Archive (status update). Read-only.
-I want to edit budget item or amount
-I want to be able to sign up new users
-I want to be able to upload images of the proteges to help identify them
+-   Keep a record of all the proteges and their purchases in the program 
+-   See an overview of total spent in the FMA
+-   See a detailed view of the total spend of individual proteges
+-   Track the protege learning budget
+-   View individual protege details
+-   See the overview for each protege
+-   Analyse how the proteges are spending , sort purchases by category and by amount
+-   Log amount spent by individual proteges
+-   I want to create a new protege
+-   I want to update a protege details
+-   I want to sort purchases by category or by spend
+-   Delete protege from view/Archive (status update). Read-only.
+-   I want to edit budget item or amount
+-   I want to be able to sign up new users
+-   I want to be able to upload images of the proteges to help identify them
 
 …so that I can;
-track how much is left in the Future Makers Academy learning budget.
-Track how much is remaining in their overall budget.
-See what proteges are finding most valuable as a source of learning.
-So I can check the protege’s individual budget.
-So that I can manage and edit the protege list and expenses.
-To make sure not to go over FMA budget
-To make sure each protege stays within their budget
-So I can keep expenses up to date
-See only current list of protege’s
-So I can edit any typo’s made a previous time
+-   track how much is left in the Future Makers Academy learning budget.
+-   Track how much is remaining in their overall budget.
+-   See what proteges are finding most valuable as a source of learning.
+-   So I can check the protege’s individual budget.
+-   So that I can manage and edit the protege list and expenses.
+-   To make sure not to go over FMA budget
+-   To make sure each protege stays within their budget
+-   So I can keep expenses up to date
+-   See only current list of protege’s
+-   So I can edit any typo’s made a previous time
 
 
 
