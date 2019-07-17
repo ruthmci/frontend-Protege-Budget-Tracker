@@ -11,7 +11,7 @@ class GetProtegeData extends React.Component {
   
   async componentDidMount() {
     const protegeId = this.props.match.params.id
-    const getOneProtege = `http://localhost:5000/proteges/${protegeId}`
+    const getOneProtege = `${process.env.REACT_APP_BACKEND_URL}/proteges/${protegeId}`
     const protegeResponse = await fetch(getOneProtege)
     const protegeData = await protegeResponse.json()
 

@@ -12,14 +12,15 @@ class App extends React.Component {
   
   // Gets all the protege data on mount and sets it in state
   async componentDidMount() {
-    const getProteges = 'http://localhost:5000/proteges'
+    const getProteges = `${process.env.REACT_APP_BACKEND_URL}/proteges`
     const protegeResponse = await fetch(getProteges)
+    console.log(protegeResponse);
     const protegeData = await protegeResponse.json()
     
     this.setState({
       proteges: protegeData,
       addingUser: true
-    })
+    });
   }
 
   // Function used by the Update Protege Component to send an update request using the data and set the updating state to true
@@ -28,7 +29,7 @@ class App extends React.Component {
       protegename: name,
       protegeemail: email
     }
-    axios.patch(`http://localhost:5000/proteges/update/${id}`, protege)
+    axios.patch(`${process.env.REACT_APP_BACKEND_URL}/proteges/update/${id}`, protege)
       .then((res) => {
         this.setState({
           updatingDone: true,
@@ -60,7 +61,7 @@ class App extends React.Component {
         expenditure: protegeData.expenditure, 
         balance: protegeData.balance
     }
-    axios.post('http://localhost:5000/proteges/add', newProtege)
+    axios.post(`${process.env.REACT_APP_BACKEND_URL}/proteges/add`, newProtege)
     .then((res) => {
       // we get protege array from state      
       const { proteges } = this.state
