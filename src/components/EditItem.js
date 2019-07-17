@@ -53,10 +53,12 @@ export default class EditItem extends Component {
     console.log('edit')
     console.log(item);
 
-    axios.patch(`${process.env.REACT_APP_BACKEND_URL}/items/update/${item.itemId}`, item)
-      .then(res => console.log(res.data));
-    window.location = `/proteges/${this.props.location.state.item.protege_id}`;
-  }
+   axios.patch(`${process.env.REACT_APP_BACKEND_URL}/items/update/${item.itemId}`, item)
+      .then(res => {
+        console.log(res.data)
+        window.location = `/proteges/${this.props.location.state.item.protege_id}`
+      })
+      .catch(err => console.log(err.response.data.messages))
 
   // Form is rendered if adding state is true, else it redirects home
   render() {

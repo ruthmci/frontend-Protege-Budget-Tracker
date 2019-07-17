@@ -36,6 +36,18 @@ const renderItems = (items) => {
 // This function calculates the total Expenditure by adding the expenditure of each item. Called in the ProtegeView function below
 const calculateExpenditure = (items) => items.reduce((total, item) => total + item.expenditure, 0)
 
+// Checks the protege isn't over their limit
+const checkExpenditure = (protege, items) => {
+  if (calculateExpenditure (items) >= 1000) {
+      return <p>Protege has reached their limit</p>
+  } else 
+      return(<p><Link to= {{
+        pathname: `/create/${protege._id}`,
+        }}>
+          Add Item
+        </Link></p> )
+}
+
 // This function validates the protege has no purchases before deleting the protege
 const deleteProtege = (e, protege, items) => {
   e.preventDefault();
@@ -59,18 +71,19 @@ const deleteProtege = (e, protege, items) => {
 
 const ProtegeView = (props) => {
   const {protege, items} = props.protege
-  
+
   return (
     <>
       <h1>Name: {protege.protegename}</h1>
       <h2>Items purchased: {renderItems(items)}</h2>
       <h2>Total spent: {calculateExpenditure(items)}</h2>
       <h2>Balance: {1000 - calculateExpenditure(items)}</h2>
-      <Link to= {{
+      {checkExpenditure(protege, items)}
+      {/* <Link to= {{
             pathname: `/create/${protege._id}`,
           }}>Add Item
           </Link> 
-          <p></p>
+          <p></p> */}
           <Link to= {{
             pathname: `/editprotege/${protege._id}`
           }}>
