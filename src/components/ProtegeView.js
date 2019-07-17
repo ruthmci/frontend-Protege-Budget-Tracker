@@ -59,6 +59,7 @@ const deleteProtege = (e, protege, items) => {
 
 const ProtegeView = (props) => {
   const {protege, items} = props.protege
+  
   return (
     <>
       <h1>Name: {protege.protegename}</h1>
