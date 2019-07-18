@@ -8,7 +8,7 @@ const expenditure = (items) => items.reduce((total, item) => total + item.expend
 const renderProteges = (protegeData) => {
   return protegeData.map((protege, index) => {
     return (
-      <div key={index}>
+      <div className="protegelist" key={index}>
         <h2>{protege.protege.protegename}</h2>
         <ul>
           <li>Email: {protege.protege.protegeemail}</li>
