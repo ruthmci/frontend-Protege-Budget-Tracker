@@ -9,7 +9,7 @@ export default class CreateItem extends Component {
   state = {
       protegeId: this.props.match.params.id,
       description: '',
-      expenditure: '',
+      expenditure: 0,
       date: new Date(),
     }
   
@@ -60,7 +60,7 @@ export default class CreateItem extends Component {
         <div className="form-group">
           <label>Expenditure: </label>
           <input 
-              type="text" 
+              type="number" 
               // required
               id="expenditure"
               className="form-control"

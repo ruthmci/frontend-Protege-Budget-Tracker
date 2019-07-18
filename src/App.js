@@ -31,6 +31,7 @@ class App extends React.Component {
     }
     axios.patch(`${process.env.REACT_APP_BACKEND_URL}/proteges/update/${id}`, protege)
       .then((res) => {
+        console.log(res)
         this.setState({
           updatingDone: true,
           proteges: res.data.proteges
