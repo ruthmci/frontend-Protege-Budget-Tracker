@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+Array [
+  Object {
+    "item": Object {
+      "__v": 0,
+      "_id": "5d27fc9baaed2d40d86d1774",
+      "createdAt": "2019-07-12T03:20:59.333Z",
+      "date": "2019-07-12T03:20:40.863Z",
+      "description": "Online course",
+      "expenditure": 400,
+      "protege_id": "5d26b697a7946c6d37dcfddf",
+      "updatedAt": "2019-07-12T03:20:59.333Z",
+    },
+  },
+]
+`;

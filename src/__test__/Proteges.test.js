@@ -44,5 +44,6 @@ describe('<Proteges />', () => {
   it('renders <Proteges /> components', () => {
     const wrapper = shallow(<Proteges proteges={proteges}/>);
   });
+  expect(proteges).toMatchSnapshot();
 })
 
