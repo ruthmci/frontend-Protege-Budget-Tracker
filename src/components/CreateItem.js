@@ -39,7 +39,8 @@ export default class CreateItem extends Component {
       window.location = `/proteges/${this.props.match.params.id}`
     })
     .catch(err => console.log(err.response.data.messages))
-
+  }
+  
   // Form for collecting item data
   render() {
     return (
