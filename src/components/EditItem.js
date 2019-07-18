@@ -79,7 +79,8 @@ export default class EditItem extends Component {
         <div className="form-group">
           <label>Expenditure: </label>
           <input 
-              type="text" 
+              type="number" 
+              required
               className="form-control"
               value={this.state.expenditure}
               onChange={this.onChangeExpenditure}

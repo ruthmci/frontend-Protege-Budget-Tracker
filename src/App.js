@@ -7,7 +7,8 @@ class App extends React.Component {
   // These states allow for conditional rendering of the forms
   state = {
     addingUser: true,
-    updatingDone: null
+    updatingDone: null,
+    errorMessages: []
   }
   
   // Gets all the protege data on mount and sets it in state
@@ -52,6 +53,7 @@ class App extends React.Component {
         updatingDone: false
       })
     }
+    
   }
 
   // This function is called by CreateProtege component
@@ -80,16 +82,22 @@ class App extends React.Component {
         addingUser: false
       })
     })
-    .catch(err => console.log(err.response.data.messages))
+    .catch( (err) => {
+      this.errorMessages(err)
+      })
+      // console.log(this.state.errorMessages)
   }
 
+  errorMessages = (err) => {
+    this.setState({errorMessages: err.response.data.messages})
+  }
   
   render() {
     const { proteges, addingUser } = this.state
     if (!proteges) {
       return null
     } else {
-        return <Routes proteges={proteges} addProtege={this.addProtege} addingUser={addingUser} updateProtege={this.updateProtege} updatingDone={this.state.updatingDone} />
+        return <Routes proteges={proteges} errorMessages={this.state.errorMessages} addProtege={this.addProtege} addingUser={addingUser} updateProtege={this.updateProtege} updatingDone={this.state.updatingDone} />
     }
   }
 }

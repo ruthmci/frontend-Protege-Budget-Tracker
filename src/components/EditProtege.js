@@ -70,6 +70,7 @@ export default class EditProtege extends Component {
                 <label>Email: </label>
                 <input 
                     type="text" 
+                    required
                     id="protegeemail"
                     className="form-control"
                     value={this.state.protegeemail}

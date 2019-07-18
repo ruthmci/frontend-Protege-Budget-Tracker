@@ -19,7 +19,7 @@ class Routes extends React.Component {
         {/* Protege routes */}
         <Route path='/proteges/:id' component={GetProtegeData} /> 
         <Route path='/add' render={() => {
-          return <CreateProtege addProtege={this.props.addProtege} addingUser={this.props.addingUser} />
+          return <CreateProtege addProtege={this.props.addProtege} addingUser={this.props.addingUser} errorMessages={this.props.errorMessages} />
         }} />
         <Route path='/editprotege/:id' render={(routeProps) => {
           return <EditProtege updateProtege={this.props.updateProtege} updatingDone={this.props.updatingDone} {...routeProps} /> }
