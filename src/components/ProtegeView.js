@@ -18,7 +18,7 @@ const renderItems = (items) => {
               item,
             }
           }}>Edit
-          </Link>  
+          </Link> 
           <br/>
           <Link to= {{
             pathname: "/delete",
@@ -75,15 +75,11 @@ const ProtegeView = (props) => {
   return (
     <>
       <h1>Name: {protege.protegename}</h1>
+      <p>Email: {protege.protegeemail}</p>
       <h2>Items purchased: {renderItems(items)}</h2>
       <h2>Total spent: {calculateExpenditure(items)}</h2>
       <h2>Balance: {1000 - calculateExpenditure(items)}</h2>
       {checkExpenditure(protege, items)}
-      {/* <Link to= {{
-            pathname: `/create/${protege._id}`,
-          }}>Add Item
-          </Link> 
-          <p></p> */}
           <Link to= {{
             pathname: `/editprotege/${protege._id}`
           }}>
