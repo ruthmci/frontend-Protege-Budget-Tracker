@@ -1,23 +1,24 @@
 
-#A link (URL) to your published App:
+### A link (URL) to your published App:
 
-#A link to your GitHub repository:
+### A link to your GitHub repository:
 https://github.com/ruthmci/backend-Protege-Budget-Tracker
 https://github.com/ruthmci/frontend-Protege-Budget-Tracker
 
-#Description of our project:
+### Description of our project:
 Our Client, Mark is the manager of the proteges within MYOB. Each protege is given a learning budget each year that he must manage. Currently he’s using an excel sheet. When he receives a request from a protege, it is usually through slack. He has to check the excel sheet and update it, when necessary. He would prefer to have a functioning app where he could achieve this with the hope to merge it with another protege app that he is also using. Within the app, he can view the complete list of current protege’s. From this page, Mark can create another protege, delete the protege listing or view the list of expenses incurred by each protege. Once he is viewing the list of expenses, Mark can create, edit or delete items from this page or edit protege details and save.
-#Screenshots
+### Screenshots
 
-#Tech stack (e.g. html, css, deployment platform, etc)
+### Tech stack (e.g. html, css, deployment platform, etc)
 
-#Instructions on how to setup, configure, deploy and use your App.
+### Instructions on how to setup, configure, deploy and use your App.
 
-#Design documentation:
+### Design documentation:
 
-#Design process
+### Design process
 
-#User Stores
+### User Stores
+
 I am a protege manager, I want to;
 
 Keep a record of all the proteges and their purchases in the program 
@@ -49,21 +50,21 @@ See only current list of protege’s
 So I can edit any typo’s made a previous time
 
 
-#A workflow diagram of the user journey/s.
+### A workflow diagram of the user journey/s.
 
-#Wireframes
+### Wireframes
 
-#Database Entity Relationship Diagrams
+### Database Entity Relationship Diagrams
 
-#Data Flow Diagram
+### Data Flow Diagram
 
-#OO design documentation
+### OO design documentation
 
-#Details of Project Management & Planning:
-#Project plan & timeline
-#Client communications
-#Screenshots of Trello board(s)
-#Answers to the Short Answer questions (Section 2.2)
+### Details of Project Management & Planning:
+### Project plan & timeline
+### Client communications
+### Screenshots of Trello board(s)
+### Answers to the Short Answer questions (Section 2.2)
 
 Project Management
 Demonstrate your ability to satisfy your client with the quality of your work and high level of service.
@@ -77,7 +78,7 @@ Manage system testing and hand over activities. Prepare maintenance or support p
 
 As a team, conduct post project review 
 _____________________________________________________________
-#Obtain final project sign-off /Create a questionnaire for the client to ascertain the satisfaction with your products and services:
+### Obtain final project sign-off /Create a questionnaire for the client to ascertain the satisfaction with your products and services:
 Please take a moment to tell us about your experience and how well our web app has been meeting your expectations. 
 How often do you use the product?
 Does the product help you achieve your goals?
@@ -93,7 +94,7 @@ Very Dissatisfied
 Can you share your reasons why?
 
 __________________________________________________________
-#Record interactions with your client in a diary format/Client communications
+### Record interactions with your client in a diary format/Client communications
 
 Client Meeting 05/07/19 through Skype 
 Mark gave us a brief description of an idea he has for an app.
@@ -129,9 +130,9 @@ Sent our Client a link to our prototype for him to use and let us know any feedb
 
 
 
-#Short Answer Questions: 
+### Short Answer Questions: 
 
-#A. What are the most important aspects of quality software?
+## A. What are the most important aspects of quality software?
 Reliability is the risk of software failure and the stability of a program when exposed to unexpected conditions. Reliable software has minimal downtime, good data integrity, and no errors that directly affect users.
 Number of failures, calendar time
 Performance/usability refers to an application’s use of resources and how that affects its scalability, customer satisfaction, and response times. Software architecture, source code design, and individual architectural components all contribute to performance efficiency.
@@ -146,7 +147,7 @@ Maintainability is the ease with which you can modify software, adapt it for ot
 
 
 
-#B. What libraries are being used in the app and why?
+## B. What libraries are being used in the app and why?
 ReactJS is fast so it can handle complex updates and still be quick. It is modular, using smaller, reusable files which makes it more maintainable. It is also scalable, so it can handle large programs that display a lot of changing data. React is popular so there is a lot of information available online.
 Mocha runs on Node.js and the browser to do simple testing. It runs tests serially, which makes it easy to track and report what’s going on.
 Babel is used as a simple javascript compiler. It supports the latest version of JavaScript so it can be used without waiting for the browser support to catch up.
@@ -154,7 +155,7 @@ ESLint is used for catching syntax errors and style issues in the command line.
 
 
 
-#C. A team is about to engage in a project, developing a website for a small business. What knowledge and skills would they need in order to develop the project?
+## C. A team is about to engage in a project, developing a website for a small business. What knowledge and skills would they need in order to develop the project?
 Programming: Javascript, HTML, CSS, MongoDB or equivalent, React, API
 
 Testing : Before giving the web app to the client, make sure its compatible with most browsers, links are working, forms work, navigation menu works, pages are loading fast. 
