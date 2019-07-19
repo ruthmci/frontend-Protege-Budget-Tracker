@@ -58,7 +58,7 @@ export default class EditProtege extends Component {
             <form onSubmit={this.onSubmit}>
               <div className="form-group"> 
                 <label>Name: </label>
-                <input  type="text"
+                <input type="text"
                     required
                     id="protegename" 
                     className="form-control"

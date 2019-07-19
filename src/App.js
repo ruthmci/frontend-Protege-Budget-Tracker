@@ -12,6 +12,7 @@ class App extends React.Component {
   
   // Gets all the protege data on mount and sets it in state
   async componentDidMount() {
+    console.log(process.env.NODE_ENV)
     const getProteges = `${process.env.REACT_APP_BACKEND_URL}/proteges`
     const protegeResponse = await fetch(getProteges)
     console.log(protegeResponse);
@@ -20,7 +21,7 @@ class App extends React.Component {
     this.setState({
       proteges: protegeData,
       addingUser: true
-    });
+    })
   }
 
   // Function used by the Update Protege Component to send an update request using the data and set the updating state to true
