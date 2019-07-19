@@ -22,7 +22,7 @@ class Routes extends React.Component {
           return <CreateProtege addProtege={this.props.addProtege} addingUser={this.props.addingUser} errorMessages={this.props.errorMessages} />
         }} />
         <Route path='/editprotege/:id' render={(routeProps) => {
-          return <EditProtege updateProtege={this.props.updateProtege} updatingDone={this.props.updatingDone} {...routeProps} /> }
+          return <EditProtege updateProtege={this.props.updateProtege} updatingDone={this.props.updatingDone} errorMessages={this.props.errorMessages} {...routeProps} /> }
         } />
         
         {/* Purchased items routes */}

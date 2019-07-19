@@ -37,8 +37,11 @@ class App extends React.Component {
           updatingDone: true,
           proteges: res.data.proteges
         })
+        this.clearErrorMessages();
       })
-      .catch(err => console.log(err.response.data.messages))
+      .catch( (err) => {
+        this.errorMessages(err)
+      })
     }
 
     // Ensures the state toggles back so the CreateProtege and updating protege form will show when needed again
@@ -81,6 +84,7 @@ class App extends React.Component {
         proteges: updatedProtegeData,
         addingUser: false
       })
+      this.clearErrorMessages();
     })
     .catch( (err) => {
       this.errorMessages(err)
@@ -88,8 +92,16 @@ class App extends React.Component {
       // console.log(this.state.errorMessages)
   }
 
+// Places the error messages into state so they can be rendered on the relevant form pages. 
+// This functions is called in the catches above
   errorMessages = (err) => {
     this.setState({errorMessages: err.response.data.messages})
+  }
+
+  clearErrorMessages = () => {
+    this.setState({
+      errorMessages: []
+    })
   }
   
   render() {

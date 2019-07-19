@@ -38,8 +38,19 @@ export default class EditProtege extends Component {
     this.props.updateProtege(this.state.protegename, this.state.protegeemail, this.props.match.params.id)
   }
 
+  displayErrors = (errors) => {
+    return errors.map((error, index) => {
+      return (
+        <div key={index}>
+          <p>{error}</p>
+        </div>
+      )
+    })
+  } 
+
   
   render() {
+     let errorMessages = this.props.errorMessages
     const { formFilled } = this.state
     console.log(this.props)
     if (!formFilled) {
@@ -81,6 +92,7 @@ export default class EditProtege extends Component {
               <button onClick={this.handleClick}>Update</button>
               <button onClick={this.handleCancel}>Cancel</button>
             </form>
+            <div><p>{this.displayErrors(errorMessages)}</p></div>
           </div>
         )
     }

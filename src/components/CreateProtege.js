@@ -10,10 +10,9 @@ class CreateProtege extends Component {
     protegeemail: '',
     expenditure: '',
     balance: 1000,
-    addingUser: true,
-    errorMessages: this.props.errorMessages
+    addingUser: true
   }
-  
+
 
   // HandleClick collects the information from state (via the form) and sends it to the addProtege function, which has been passed in from App.js
 
@@ -26,7 +25,6 @@ class CreateProtege extends Component {
       balance: this.state.balance
     }
    this.props.addProtege(protegeData)
-   
   }
 
   handleCancel = (e) => {
@@ -38,6 +36,7 @@ class CreateProtege extends Component {
     this.setState({ [e.target.id]: e.target.value})
   }
 
+// displays the error messsages
   displayErrors = (errors) => {
     return errors.map((error, index) => {
       return (
@@ -59,7 +58,7 @@ class CreateProtege extends Component {
       return (
         <div>
           <h1>Protege form</h1>
-          <form>
+          <form onSubmit={this.handleClick} >
           <div className="form-group"> 
             <label htmlFor="protegename">Protege name</label>
               <input 
