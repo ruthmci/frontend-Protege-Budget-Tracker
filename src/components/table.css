@@ -1,10 +1,11 @@
 @text-width: 180px;
 @num-width: 80px;
 .table{
-   margin:10%;
+   margin:3%;
+   height:70%;
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 90%;
+  width: 100%;
 }
  
    tr {
