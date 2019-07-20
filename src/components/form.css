@@ -1,11 +1,25 @@
 body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
 
-.input-container {
-  display: -ms-flexbox; /* IE10 */
+.form-box{
   display: flex;
-  width: 100%;
-  margin-bottom: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-header {
+  margin-bottom: 20px;
+  /* padding-bottom: 2em; */
+}
+
+.form-container {
+  background-color: #e9ecef;
+  padding: 2em 4em;
+  border: 1px solid #e9ecef;
+  /* border-radius: .5em; */
+  min-width: 600px;
+  margin-top: 100px;
+  align: center;
 }
 
 .icon {
@@ -22,34 +36,50 @@ body {font-family: Arial, Helvetica, sans-serif;}
   outline: none;
 }
 
-.input-field:focus {
-  border: 2px solid dodgerblue;
+.field:focus {
+  border: 2px solid purple;
 }
 
-.purple-button:hover {
-  background-color: #8241AA;
-  border-color: #8241AA;
+.button1:hover {
+   background-color:  #EC0677; 
+} 
+    
+
+.button2:hover {
+  background-color:  #EC0677;
+}
+
+.button1 {
+  background:#8241AA;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 4px 20px 4px;
+  cursor: pointer;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.button2 {
+  background:#B93499;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 12px;
+  cursor: pointer;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
 
-.purple-button {
-    color: #fff;
-    background-color: #6100A5;
-    border-color: #6100A5;
-    display: inline-block;
-    font-weight: 400;
-    color: #fff;
-    text-align: center;
-    vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-    margin: 10px;
-    /* background-color: transparent; */
-    /* border: 1px solid transparent; */
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: .25rem;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+.error-message {
+  color: #EC0677;
+  font-size: 14px;
+  margin-bottom: 0;
 }

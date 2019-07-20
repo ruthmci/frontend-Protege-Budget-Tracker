@@ -64,13 +64,13 @@ class CreateProtege extends Component {
       return <Redirect to='/' />
     } else {
       return (
-        <Container className="App">
-          <h2>Register a protege</h2>
-          <Form className="form" onSubmit={this.handleClick} >
-          <Col>
-            <FormGroup>
-              <Label className="label" htmlFor="protegename">Protege name</Label>   
-                  <Input className="" 
+        <div className="form-box">
+        <div className="form-container">
+          <h2 className="form-header">Register a protege</h2>
+          <form className="form" onSubmit={this.handleClick} >
+           <div className="form-group"> 
+              <label className="label" htmlFor="protegename">Protege name</label>   
+                  <Input className="field" 
                     onChange={this.handleChange} 
                     type="text" 
                     required
@@ -79,12 +79,10 @@ class CreateProtege extends Component {
                     placeholder="protege name" 
                     value={this.state.protegename} 
                   />
-              </FormGroup>
-            </Col>
-            <Col>
-              <FormGroup>
-                <Label  className="label" htmlFor="protegeemail">Email</Label>
-                <Input className=""    
+           </div>
+           <div className="form-group"> 
+                <label  className="label" htmlFor="protegeemail">Email</label>
+                <Input className="field"    
                       onChange={this.handleChange} 
                       type="text" 
                       required
@@ -93,17 +91,17 @@ class CreateProtege extends Component {
                       placeholder="email" 
                       value={this.state.protegeemail} 
                     />
-              </FormGroup>
-            </Col>
-              <button className="purple-button" onClick={this.handleClick}>Save</button>
-              <button className="purple-button" onClick={this.handleCancel}>Cancel</button>
-              
-          </Form> 
+         </div>
+            <div>
+              <button className="button1" onClick={this.handleClick}>Save</button>  
+              <button className="button2" onClick={this.handleCancel}>Cancel</button>
+            </div>              
+          </form> 
          {/* <FormFeedback>  */}
-         <p className="errorMessage">{this.displayErrors(errorMessages)} </p>
+         <p className="error-message">{this.displayErrors(errorMessages)} </p>
          {/* </FormFeedback> */}
-      </Container>
-      
+      </div>
+      </div>
       )
     }
   }

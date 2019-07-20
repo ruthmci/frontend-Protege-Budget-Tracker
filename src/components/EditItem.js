@@ -3,6 +3,10 @@
 import React, { Component } from 'react';
 import {Redirect} from 'react-router-dom'
 import axios from 'axios';
+import {
+  Container, Col, Form,
+  FormGroup, Label, Input
+} from 'reactstrap';
 
 export default class EditItem extends Component {
     state = {

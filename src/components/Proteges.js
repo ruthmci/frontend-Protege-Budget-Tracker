@@ -3,13 +3,13 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import './table.css'
-
+import {Table} from 'reactstrap'
 const expenditure = (items) => items.reduce((total, item) => total + item.expenditure, 0)
 
 const renderProteges = (protegeData) => {
   // return protegeData.map((protege, index) => {
     return (
-      <table className="table">
+      <Table >
        <thead className="thead-light">
             <tr>
               <th>Protege Name</th>
@@ -37,7 +37,7 @@ const renderProteges = (protegeData) => {
       ))}
         
       </tbody>
-      </table>
+      </Table>
     )
   // })
 }
