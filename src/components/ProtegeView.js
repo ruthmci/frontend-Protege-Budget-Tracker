@@ -29,8 +29,7 @@ const renderItems = (items) => {
           Edit Item <FontAwesomeIcon icon={ faEdit }/>
           </button>
           </Link>  
-          }}>Edit
-          </Link> 
+          
           <br/>
           <Link to= {{
             pathname: "/delete",
