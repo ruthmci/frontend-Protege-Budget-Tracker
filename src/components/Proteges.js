@@ -22,7 +22,7 @@ const renderProteges = (protegeData) => {
       <tbody>
       {protegeData.map((protege, index) => (
         <tr>
-          <div className="protegelist" key={index}>
+          {/* <div className="protegelist" key={index}> */}
             <td>{protege.protege.protegename}</td>
               <td>{protege.protege.protegeemail}</td>
               <td>{expenditure(protege.items)}</td>
@@ -32,7 +32,7 @@ const renderProteges = (protegeData) => {
               <button className="button1">View/edit
               </button></Link>
             </td>
-          </div>
+          {/* </div> */}
         </tr>
       ))}
         

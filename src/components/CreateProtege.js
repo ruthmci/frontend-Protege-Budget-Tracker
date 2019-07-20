@@ -1,4 +1,12 @@
 // Component for creating a protege
+import './form.css'
+
+
+import {
+  Container, Col, Form,
+  FormGroup, Label, Input
+} from 'reactstrap';
+
 
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom'
@@ -56,40 +64,46 @@ class CreateProtege extends Component {
       return <Redirect to='/' />
     } else {
       return (
-        <div>
-          <h1>Protege form</h1>
-          <form onSubmit={this.handleClick} >
-          <div className="form-group"> 
-            <label htmlFor="protegename">Protege name</label>
-              <input 
-                onChange={this.handleChange} 
-                type="text" 
-                required
-                className="form-control"
-                id="protegename" 
-                placeholder="protege name" 
-                value={this.state.protegename} 
-              />
-              <label htmlFor="protegeemail">Email</label>
-              <input 
-                onChange={this.handleChange} 
-                type="text" 
-                required
-                className="form-control"
-                id="protegeemail" 
-                placeholder="email" 
-                value={this.state.protegeemail} 
-              />
-              <button className ="button2" onClick={this.handleClick}>Save</button>
-              <button className ="button1" onClick={this.handleCancel}>Cancel</button>
-              <button onClick={this.handleClick}>Save</button>
-              <button onClick={this.handleCancel}>Cancel</button>
+        <Container className="App">
+          <h2>Register a protege</h2>
+          <Form className="form" onSubmit={this.handleClick} >
+          <Col>
+            <FormGroup>
+              <Label className="label" htmlFor="protegename">Protege name</Label>   
+                  <Input className="" 
+                    onChange={this.handleChange} 
+                    type="text" 
+                    required
+                    // className="form-control"
+                    id="protegename" 
+                    placeholder="protege name" 
+                    value={this.state.protegename} 
+                  />
+              </FormGroup>
+            </Col>
+            <Col>
+              <FormGroup>
+                <Label  className="label" htmlFor="protegeemail">Email</Label>
+                <Input className=""    
+                      onChange={this.handleChange} 
+                      type="text" 
+                      required
+                      // className="form-control"
+                      id="protegeemail" 
+                      placeholder="email" 
+                      value={this.state.protegeemail} 
+                    />
+              </FormGroup>
+            </Col>
+              <button className="purple-button" onClick={this.handleClick}>Save</button>
+              <button className="purple-button" onClick={this.handleCancel}>Cancel</button>
               
-          </div>
-          
-          </form>
-          <div><p>{this.displayErrors(errorMessages)}</p></div>
-        </div>
+          </Form> 
+         {/* <FormFeedback>  */}
+         <p className="errorMessage">{this.displayErrors(errorMessages)} </p>
+         {/* </FormFeedback> */}
+      </Container>
+      
       )
     }
   }
