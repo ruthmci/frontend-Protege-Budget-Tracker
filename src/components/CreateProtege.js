@@ -61,8 +61,8 @@ class CreateProtege extends Component {
                 placeholder="email" 
                 value={this.state.protegeemail} 
               />
-              <button onClick={this.handleClick}>Save</button>
-              <button onClick={this.handleCancel}>Cancel</button>
+              <button className ="button2" onClick={this.handleClick}>Save</button>
+              <button className ="button1" onClick={this.handleCancel}>Cancel</button>
           </form>
         </div>
       )

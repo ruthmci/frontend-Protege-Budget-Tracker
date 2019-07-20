@@ -2,6 +2,8 @@
 
 import React, { Component } from 'react';
 import axios from 'axios';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSave } from '@fortawesome/free-solid-svg-icons';
 
 export default class CreateItem extends Component {
   
@@ -69,8 +71,8 @@ export default class CreateItem extends Component {
               />
         </div>
 
-        <button onClick={this.handleClick}>Save</button>
-        <button onClick={this.handleCancel}>Cancel</button>
+        <button className ="button2" onClick={this.handleClick}>save</button>
+        <button className ="button1" onClick={this.handleCancel}>Cancel</button>
       </form>
     </div>
     )

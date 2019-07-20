@@ -50,8 +50,8 @@ export default class EditItem extends Component {
     return (
       <>
       <h3> Are you sure you want to delete?</h3>
-        <button onClick={this.handleClick}>Delete</button>
-        <button onClick={this.handleCancel}>Cancel</button>
+        <button className ="button2" onClick={this.handleClick}>Delete</button>
+        <button className ="button1" onClick={this.handleCancel}>Cancel</button>
         </>
     )
   } else

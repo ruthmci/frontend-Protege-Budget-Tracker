@@ -3,10 +3,17 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import axios from 'axios'
+import './Buttons.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faUserEdit } from '@fortawesome/free-solid-svg-icons';
+import { faEdit } from '@fortawesome/free-solid-svg-icons';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 // Renders the purchased items as a list. Called in the ProtegeView function below.
 
 const renderItems = (items) => {
+  // const buttonStyle = { backgroundColor: 'yellow' }
   return items.map((item, index) => {
     return (
       <div key={index}>
@@ -17,7 +24,10 @@ const renderItems = (items) => {
             state: {
               item,
             }
-          }}>Edit
+          }}>
+          <button className="button1">
+          Edit Item <FontAwesomeIcon icon={ faEdit }/>
+          </button>
           </Link>  
           <br/>
           <Link to= {{
@@ -25,12 +35,14 @@ const renderItems = (items) => {
             state: {
               item,
             }
-          }}>Delete Item
+          }}>
+          <button className = "button1">Delete Item <FontAwesomeIcon icon={ faTrash }/></button>
           </Link> 
         </ul>
       </div>
     )
   })
+  
 } 
 
 // This function calculates the total Expenditure by adding the expenditure of each item. Called in the ProtegeView function below
@@ -44,7 +56,9 @@ const checkExpenditure = (protege, items) => {
       return(<p><Link to= {{
         pathname: `/create/${protege._id}`,
         }}>
-          Add Item
+        <button className="button1">
+          Add Item <FontAwesomeIcon icon={ faPlus }/>
+          </button>
         </Link></p> )
 }
 
@@ -88,11 +102,13 @@ const ProtegeView = (props) => {
           <Link to= {{
             pathname: `/editprotege/${protege._id}`
           }}>
-          Edit protege details
+          <button className="button1">
+          Edit protege details <FontAwesomeIcon icon={ faUserEdit }/>
+          </button>
           </Link> 
           <p></p>
-          <button type="submit" onClick={e => {if (window.confirm('Are you sure you want to delete')) deleteProtege(e, protege, items)}}>
-              Delete protege
+          <button className="button1" type="submit" onClick={e => {if (window.confirm('Are you sure you want to delete protege')) deleteProtege(e, protege, items)}}>
+          Delete Protege <FontAwesomeIcon icon={ faTrash }/>
             </button>
     </>
   )
