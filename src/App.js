@@ -7,11 +7,13 @@ class App extends React.Component {
   // These states allow for conditional rendering of the forms
   state = {
     addingUser: true,
-    updatingDone: null
+    updatingDone: null,
+    errorMessages: []
   }
   
   // Gets all the protege data on mount and sets it in state
   async componentDidMount() {
+    console.log(process.env.NODE_ENV)
     const getProteges = `${process.env.REACT_APP_BACKEND_URL}/proteges`
     const protegeResponse = await fetch(getProteges)
     console.log(protegeResponse);
@@ -20,7 +22,7 @@ class App extends React.Component {
     this.setState({
       proteges: protegeData,
       addingUser: true
-    });
+    })
   }
 
   // Function used by the Update Protege Component to send an update request using the data and set the updating state to true
@@ -31,12 +33,16 @@ class App extends React.Component {
     }
     axios.patch(`${process.env.REACT_APP_BACKEND_URL}/proteges/update/${id}`, protege)
       .then((res) => {
+        console.log(res)
         this.setState({
           updatingDone: true,
           proteges: res.data.proteges
         })
+        this.clearErrorMessages();
       })
-      .catch(err => console.log(err.response.data.messages))
+      .catch( (err) => {
+        this.errorMessages(err)
+      })
     }
 
     // Ensures the state toggles back so the CreateProtege and updating protege form will show when needed again
@@ -51,6 +57,7 @@ class App extends React.Component {
         updatingDone: false
       })
     }
+    
   }
 
   // This function is called by CreateProtege component
@@ -78,17 +85,32 @@ class App extends React.Component {
         proteges: updatedProtegeData,
         addingUser: false
       })
+      this.clearErrorMessages();
     })
-    .catch(err => console.log(err.response.data.messages))
+    .catch( (err) => {
+      this.errorMessages(err)
+      })
+      // console.log(this.state.errorMessages)
   }
 
+// Places the error messages into state so they can be rendered on the relevant form pages. 
+// This functions is called in the catches above
+  errorMessages = (err) => {
+    this.setState({errorMessages: err.response.data.messages})
+  }
+
+  clearErrorMessages = () => {
+    this.setState({
+      errorMessages: []
+    })
+  }
   
   render() {
     const { proteges, addingUser } = this.state
     if (!proteges) {
       return null
     } else {
-        return <Routes proteges={proteges} addProtege={this.addProtege} addingUser={addingUser} updateProtege={this.updateProtege} updatingDone={this.state.updatingDone} />
+        return <Routes proteges={proteges} errorMessages={this.state.errorMessages} addProtege={this.addProtege} addingUser={addingUser} updateProtege={this.updateProtege} updatingDone={this.state.updatingDone} />
     }
   }
 }

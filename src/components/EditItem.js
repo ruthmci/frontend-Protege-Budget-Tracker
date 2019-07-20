@@ -8,7 +8,8 @@ export default class EditItem extends Component {
     state = {
       description: '',
       expenditure: '',
-      adding: true
+      adding: true,
+      errorMessages: []
     }
   
   handleCancel = (e) => {
@@ -58,10 +59,27 @@ export default class EditItem extends Component {
         console.log(res.data)
         window.location = `/proteges/${this.props.location.state.item.protege_id}`
       })
-      .catch(err => console.log(err.response.data.messages))
+      .catch((err) => {
+        this.setState({errorMessages: err.response.data.messages})
+      })
     }
+
+// Displays the error messages
+  displayErrors = (errors) => {
+    return errors.map((error, index) => {
+      return (
+        <div key={index}>
+          <p>{error}</p>
+        </div>
+      )
+    })
+  } 
+
+
   // Form is rendered if adding state is true, else it redirects home
   render() {
+     let errorMessages = this.state.errorMessages
+
     if (this.state.adding === true) {
     return (
     <div>
@@ -79,7 +97,8 @@ export default class EditItem extends Component {
         <div className="form-group">
           <label>Expenditure: </label>
           <input 
-              type="text" 
+              type="number" 
+              required
               className="form-control"
               value={this.state.expenditure}
               onChange={this.onChangeExpenditure}
@@ -89,6 +108,7 @@ export default class EditItem extends Component {
         <button className ="button2" onClick={this.handleClick}>Update</button>
         <button className ="button1" onClick={this.handleCancel}>Cancel</button>
       </form>
+      <div><p>{this.displayErrors(errorMessages)}</p></div>
     </div>
     )
   } else

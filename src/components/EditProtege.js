@@ -38,8 +38,19 @@ export default class EditProtege extends Component {
     this.props.updateProtege(this.state.protegename, this.state.protegeemail, this.props.match.params.id)
   }
 
+  displayErrors = (errors) => {
+    return errors.map((error, index) => {
+      return (
+        <div key={index}>
+          <p>{error}</p>
+        </div>
+      )
+    })
+  } 
+
   
   render() {
+     let errorMessages = this.props.errorMessages
     const { formFilled } = this.state
     console.log(this.props)
     if (!formFilled) {
@@ -58,7 +69,7 @@ export default class EditProtege extends Component {
             <form onSubmit={this.onSubmit}>
               <div className="form-group"> 
                 <label>Name: </label>
-                <input  type="text"
+                <input type="text"
                     required
                     id="protegename" 
                     className="form-control"
@@ -70,6 +81,7 @@ export default class EditProtege extends Component {
                 <label>Email: </label>
                 <input 
                     type="text" 
+                    required
                     id="protegeemail"
                     className="form-control"
                     value={this.state.protegeemail}
@@ -80,6 +92,7 @@ export default class EditProtege extends Component {
               <button className ="button2" onClick={this.handleClick}>Update</button>
               <button className ="button1" onClick={this.handleCancel}>Cancel</button>
             </form>
+            <div><p>{this.displayErrors(errorMessages)}</p></div>
           </div>
         )
     }

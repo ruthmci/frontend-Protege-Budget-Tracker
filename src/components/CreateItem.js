@@ -11,8 +11,8 @@ export default class CreateItem extends Component {
   state = {
       protegeId: this.props.match.params.id,
       description: '',
-      expenditure: '',
       date: new Date(),
+      errorMessages: []
     }
   
     handleCancel = (e) => {
@@ -40,11 +40,26 @@ export default class CreateItem extends Component {
       console.log(res.data)
       window.location = `/proteges/${this.props.match.params.id}`
     })
-    .catch(err => console.log(err.response.data.messages))
+    .catch((err) => {
+      this.setState({errorMessages: err.response.data.messages})
+    })
   }
-  
+
+// displays the error messages
+displayErrors = (errors) => {
+    return errors.map((error, index) => {
+      return (
+        <div key={index}>
+          <p>{error}</p>
+        </div>
+      )
+    })
+  } 
+
   // Form for collecting item data
   render() {
+     let errorMessages = this.state.errorMessages
+     console.log(errorMessages)
     return (
     <div>
       <h3>Create New Item </h3>
@@ -52,7 +67,6 @@ export default class CreateItem extends Component {
         <div className="form-group"> 
           <label>Description: </label>
           <input  type="text"
-              // required
               id="description"
               className="form-control"
               value={this.state.description}
@@ -62,8 +76,7 @@ export default class CreateItem extends Component {
         <div className="form-group">
           <label>Expenditure: </label>
           <input 
-              type="text" 
-              // required
+              type="number" 
               id="expenditure"
               className="form-control"
               value={this.state.expenditure}
@@ -74,6 +87,7 @@ export default class CreateItem extends Component {
         <button className ="button2" onClick={this.handleClick}>save</button>
         <button className ="button1" onClick={this.handleCancel}>Cancel</button>
       </form>
+      <div><p>{this.displayErrors(errorMessages)}</p></div>
     </div>
     )
   }
