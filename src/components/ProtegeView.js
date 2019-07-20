@@ -4,6 +4,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import axios from 'axios'
 import './Buttons.css'
+import './protegeview.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { faUserEdit } from '@fortawesome/free-solid-svg-icons';
@@ -16,9 +17,10 @@ const renderItems = (items) => {
   // const buttonStyle = { backgroundColor: 'yellow' }
   return items.map((item, index) => {
     return (
+      <div className= "List">
       <div key={index}>
         <ul>
-          <li> {item.description} | $ {item.expenditure}</li>
+       <li>{item.description} | $ {item.expenditure}</li> 
           <Link to= {{
             pathname: "/edit",
             state: {
@@ -29,8 +31,6 @@ const renderItems = (items) => {
           Edit Item <FontAwesomeIcon icon={ faEdit }/>
           </button>
           </Link>  
-          
-          <br/>
           <Link to= {{
             pathname: "/delete",
             state: {
@@ -38,8 +38,9 @@ const renderItems = (items) => {
             }
           }}>
           <button className = "button1">Delete Item <FontAwesomeIcon icon={ faTrash }/></button>
-          </Link> 
+          </Link>
         </ul>
+      </div>
       </div>
     )
   })
@@ -88,25 +89,25 @@ const ProtegeView = (props) => {
   const {protege, items} = props.protege
 
   return (
-    <>
-      <h1>Name: {protege.protegename}</h1>
+    <div className="list1">
+      <p>Name: {protege.protegename}</p>
       <p>Email: {protege.protegeemail}</p>
-      <h2>Items purchased: {renderItems(items)}</h2>
-      <h2>Total spent: {calculateExpenditure(items)}</h2>
-      <h2>Balance: {1000 - calculateExpenditure(items)}</h2>
+      <p>Items purchased: {renderItems(items)}</p>
+      <p>Total spent: {calculateExpenditure(items)}</p>
+      <p>Balance: {1000 - calculateExpenditure(items)}</p>
       {checkExpenditure(protege, items)}
-          <Link to= {{
+      <Link to= {{
             pathname: `/editprotege/${protege._id}`
           }}>
           <button className="button1">
           Edit protege details <FontAwesomeIcon icon={ faUserEdit }/>
           </button>
           </Link> 
-          <p></p>
           <button className="button1" type="submit" onClick={e => {if (window.confirm('Are you sure you want to delete protege')) deleteProtege(e, protege, items)}}>
           Delete Protege <FontAwesomeIcon icon={ faTrash }/>
             </button>
-    </>
+            
+    </div>
   )
 }
 

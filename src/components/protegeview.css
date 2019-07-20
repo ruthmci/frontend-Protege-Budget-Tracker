@@ -1,0 +1,13 @@
+.List{
+ width:70%;
+ height:100px;
+ /* background:burlywood; */
+ border:1px solid black;
+ margin:auto 1%;
+}
+.list1{
+  width:35%;
+  height:100px;
+  /* border:1px solid black; */
+  margin:auto ; 
+}

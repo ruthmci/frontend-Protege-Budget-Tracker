@@ -34,8 +34,29 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 .purple-button {
     color: #fff;
-    background-color: #6100A5;
-    border-color: #6100A5;
+    background-color: #8241AA;
+    border-color: #8241AA;
+    display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    margin: 10px;
+    /* background-color: transparent; */
+    /* border: 1px solid transparent; */
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.pink-button{
+  color: #fff;
+    background-color: #B93499;
+    border-color:#B93499;;
     display: inline-block;
     font-weight: 400;
     color: #fff;

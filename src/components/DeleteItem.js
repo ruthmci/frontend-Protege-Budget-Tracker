@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import {Redirect} from 'react-router-dom'
 import axios from 'axios';
+import './DeleteItem.css'
 export default class EditItem extends Component {
  
     state = {
@@ -48,11 +49,13 @@ export default class EditItem extends Component {
   render() {
     if (this.state.adding === true) {
     return (
-      <>
+      <div className= "delete">
       <h3> Are you sure you want to delete?</h3>
+      <div className="delete-button">
         <button className ="button2" onClick={this.handleClick}>Delete</button>
         <button className ="button1" onClick={this.handleCancel}>Cancel</button>
-        </>
+        </div>
+        </div>
     )
   } else
   return (

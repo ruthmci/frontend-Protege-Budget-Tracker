@@ -95,7 +95,7 @@ class CreateProtege extends Component {
                     />
               </FormGroup>
             </Col>
-              <button className="purple-button" onClick={this.handleClick}>Save</button>
+              <button className="pink-button" onClick={this.handleClick}>Save</button>
               <button className="purple-button" onClick={this.handleCancel}>Cancel</button>
               
           </Form> 
