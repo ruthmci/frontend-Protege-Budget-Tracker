@@ -10,6 +10,8 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { faUserEdit } from '@fortawesome/free-solid-svg-icons';
 import { faEdit } from '@fortawesome/free-solid-svg-icons';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+
 
 // Renders the purchased items as a list. Called in the ProtegeView function below.
 
@@ -96,6 +98,13 @@ const ProtegeView = (props) => {
       <p>Total spent: {calculateExpenditure(items)}</p>
       <p>Balance: {1000 - calculateExpenditure(items)}</p>
       {checkExpenditure(protege, items)}
+      <Link to= {{
+            pathname: '/'
+          }}>
+          <button className="button1">
+         <FontAwesomeIcon icon={ faChevronLeft }/> Back
+          </button>
+          </Link> 
       <Link to= {{
             pathname: `/editprotege/${protege._id}`
           }}>
