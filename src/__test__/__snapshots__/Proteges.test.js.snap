@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+Array [
+  Object {
+    "items": Array [
+      Object {
+        "__v": 0,
+        "_id": "5d2fc1746574fd0573e88cec",
+        "createdAt": "2019-07-18T00:46:44.984Z",
+        "date": "2019-07-18T00:46:38.730Z",
+        "description": "Coffee",
+        "expenditure": 50,
+        "protege_id": "5d26b687a7946c6d37dcfdde",
+        "updatedAt": "2019-07-18T00:46:44.984Z",
+      },
+      Object {
+        "__v": 0,
+        "_id": "5d2fc1746574fd0573e88cee",
+        "createdAt": "2019-07-18T00:46:44.984Z",
+        "date": "2019-07-18T00:46:38.730Z",
+        "description": "Coffee",
+        "expenditure": 100,
+        "protege_id": "5d26b687a7946c6d37dcfdde",
+        "updatedAt": "2019-07-18T00:46:44.984Z",
+      },
+    ],
+    "protege": Object {
+      "__v": 0,
+      "_id": "5d26b687a7946c6d37dcfdde",
+      "balance": 1000,
+      "createdAt": "2019-07-11T04:09:43.804Z",
+      "expenditure": 0,
+      "protegeemail": "Elizabeth@myob.com.au",
+      "protegename": "El",
+      "updatedAt": "2019-07-18T00:37:55.952Z",
+    },
+  },
+]
+`;

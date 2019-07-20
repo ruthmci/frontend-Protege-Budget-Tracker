@@ -105,8 +105,8 @@ export default class EditItem extends Component {
               />
         </div>
 
-        <button onClick={this.handleClick}>Update</button>
-        <button onClick={this.handleCancel}>Cancel</button>
+        <button className ="button2" onClick={this.handleClick}>Update</button>
+        <button className ="button1" onClick={this.handleCancel}>Cancel</button>
       </form>
       <div><p>{this.displayErrors(errorMessages)}</p></div>
     </div>

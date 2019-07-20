@@ -45,5 +45,6 @@ describe('<Proteges />', () => {
     const wrapper = (<Proteges proteges={proteges}/>);
   
   });
+  expect(proteges).toMatchSnapshot();
 })
 
