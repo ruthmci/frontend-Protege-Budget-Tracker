@@ -2,8 +2,7 @@
 
 import React, { Component } from 'react';
 import axios from 'axios';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSave } from '@fortawesome/free-solid-svg-icons';
+import './form.css'
 
 export default class CreateItem extends Component {
   
@@ -61,33 +60,43 @@ displayErrors = (errors) => {
      let errorMessages = this.state.errorMessages
      console.log(errorMessages)
     return (
-    <div>
-      <h3>Create New Item </h3>
-      <form onSubmit={this.onSubmit}>
+    <div className="form-box">
+        <div className="form-container-item">
+          <div className="form-header-box">
+            <h2 className="form-header">Register a purchase</h2>
+          </div>
+      <form className="form" onSubmit={this.onSubmit}>
         <div className="form-group"> 
-          <label>Description: </label>
+          <label className="label">Description </label>
           <input  type="text"
               id="description"
               className="form-control"
               value={this.state.description}
               onChange={this.onChange}
+              placeholder="description of purchase"
               />
         </div>
         <div className="form-group">
-          <label>Expenditure: </label>
-          <input 
-              type="number" 
-              id="expenditure"
-              className="form-control"
-              value={this.state.expenditure}
-              onChange={this.onChange}
-              />
+          <label className="label">Expenditure </label>
+             <div class="input-icon">
+                <input 
+                    type="number" 
+                    id="expenditure"
+                    className="form-control"
+                    value={this.state.expenditure}
+                    onChange={this.onChange}
+                    placeholder="price"
+                    />
+                    <i>$</i>
+              </div>
         </div>
-
-        <button className ="button2" onClick={this.handleClick}>save</button>
-        <button className ="button1" onClick={this.handleCancel}>Cancel</button>
+        <div className="buttons">
+          <button className ="purple-button-form" onClick={this.handleClick}>Save</button>
+          <button className ="pink-button-form" onClick={this.handleCancel}>Cancel</button>
+        </div>
       </form>
-      <div><p>{this.displayErrors(errorMessages)}</p></div>
+      <div><p className="error-message">{this.displayErrors(errorMessages)}</p></div>
+    </div>
     </div>
     )
   }

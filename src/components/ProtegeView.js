@@ -12,7 +12,6 @@ import { faEdit } from '@fortawesome/free-solid-svg-icons';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 
-
 // Renders the purchased items as a list. Called in the ProtegeView function below.
 
 const renderItems = (items) => {

@@ -2,12 +2,6 @@
 import './form.css'
 
 
-import {
-  Container, Col, Form,
-  FormGroup, Label, Input
-} from 'reactstrap';
-
-
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom'
 
@@ -64,13 +58,15 @@ class CreateProtege extends Component {
       return <Redirect to='/' />
     } else {
       return (
-        <Container className="App">
-          <h2>Register a protege</h2>
-          <Form className="form" onSubmit={this.handleClick} >
-          <Col>
-            <FormGroup>
-              <Label className="label" htmlFor="protegename">Protege name</Label>   
-                  <Input className="" 
+        <div className="form-box">
+        <div className="form-container-protege">
+          <div className="form-header-box">
+            <h2 className="form-header">Register a protege</h2>
+          </div>
+          <form className="form" onSubmit={this.handleClick} >
+           <div className="form-group"> 
+              <label className="label" htmlFor="protegename">Protege name</label>   
+                  <input className="form-control" 
                     onChange={this.handleChange} 
                     type="text" 
                     required
@@ -79,12 +75,10 @@ class CreateProtege extends Component {
                     placeholder="protege name" 
                     value={this.state.protegename} 
                   />
-              </FormGroup>
-            </Col>
-            <Col>
-              <FormGroup>
-                <Label  className="label" htmlFor="protegeemail">Email</Label>
-                <Input className=""    
+           </div>
+           <div className="form-group"> 
+                <label  className="label" htmlFor="protegeemail">Email</label>
+                <input className="form-control"    
                       onChange={this.handleChange} 
                       type="text" 
                       required
@@ -93,17 +87,17 @@ class CreateProtege extends Component {
                       placeholder="email" 
                       value={this.state.protegeemail} 
                     />
-              </FormGroup>
-            </Col>
-              <button className="pink-button" onClick={this.handleClick}>Save</button>
-              <button className="purple-button" onClick={this.handleCancel}>Cancel</button>
-              
-          </Form> 
+         </div>
+            <div className="buttons">
+              <button className="purple-button-form" onClick={this.handleClick}>Save</button>  
+              <button className="pink-button-form" onClick={this.handleCancel}>Cancel</button>
+            </div>              
+          </form> 
          {/* <FormFeedback>  */}
-         <p className="errorMessage">{this.displayErrors(errorMessages)} </p>
+         <p className="error-message">{this.displayErrors(errorMessages)} </p>
          {/* </FormFeedback> */}
-      </Container>
-      
+      </div>
+      </div>
       )
     }
   }
