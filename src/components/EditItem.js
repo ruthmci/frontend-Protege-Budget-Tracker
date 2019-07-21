@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import {Redirect} from 'react-router-dom'
 import axios from 'axios';
+import './form.css'
 
 export default class EditItem extends Component {
     state = {
@@ -83,10 +84,14 @@ export default class EditItem extends Component {
     if (this.state.adding === true) {
     return (
     <div>
-      <h3>Edit Item </h3>
-      <form onSubmit={this.onSubmit}>
+      <div className="form-box">
+        <div className="form-container-item">
+          <div className="form-header-box">
+            <h2 className="form-header">Edit a purchase</h2>
+          </div>
+      <form className="form" onSubmit={this.onSubmit}>
         <div className="form-group"> 
-          <label>Description: </label>
+          <label className="label">Description </label>
           <input  type="text"
               required
               className="form-control"
@@ -95,20 +100,27 @@ export default class EditItem extends Component {
               />
         </div>
         <div className="form-group">
-          <label>Expenditure: </label>
+          <label className="label">Expenditure </label>
+          <div class="input-icon">
           <input 
               type="number" 
               required
               className="form-control"
               value={this.state.expenditure}
               onChange={this.onChangeExpenditure}
+              placeholder="price"
               />
+              <i>$</i>
+          </div>
         </div>
-
-        <button className ="button2" onClick={this.handleClick}>Update</button>
-        <button className ="button1" onClick={this.handleCancel}>Cancel</button>
+        <div className="buttons">
+          <button className ="purple-button-form" onClick={this.handleClick}>Update</button>
+          <button className ="pink-button-form" onClick={this.handleCancel}>Cancel</button>
+        </div>
       </form>
-      <div><p>{this.displayErrors(errorMessages)}</p></div>
+      <div><p className="error-message">{this.displayErrors(errorMessages)}</p></div>
+    </div>
+    </div>
     </div>
     )
   } else

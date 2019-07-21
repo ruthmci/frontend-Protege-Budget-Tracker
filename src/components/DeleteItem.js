@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import {Redirect} from 'react-router-dom'
 import axios from 'axios';
+import './form.css'
 import './DeleteItem.css'
 export default class EditItem extends Component {
  

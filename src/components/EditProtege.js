@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Redirect} from 'react-router-dom'
+import './form.css'
 
 export default class EditProtege extends Component {
   state = {
@@ -63,12 +64,14 @@ export default class EditProtege extends Component {
       )
     } else {
         return (
-          <div>
-            <h3>Edit Protege 
-            </h3>
-            <form onSubmit={this.onSubmit}>
+           <div className="form-box">
+              <div className="form-container-protege">
+                <div className="form-header-box">
+                  <h2 className="form-header">Edit protege details</h2>
+                </div>
+            <form className="form" onSubmit={this.onSubmit}>
               <div className="form-group"> 
-                <label>Name: </label>
+                <label className="label">Protege name </label>
                 <input type="text"
                     required
                     id="protegename" 
@@ -78,7 +81,7 @@ export default class EditProtege extends Component {
                     />
               </div>
               <div className="form-group">
-                <label>Email: </label>
+                <label className="label">Email </label>
                 <input 
                     type="text" 
                     required
@@ -88,12 +91,15 @@ export default class EditProtege extends Component {
                     onChange={this.onChange}
                     />
               </div>
-      
-              <button className ="button2" onClick={this.handleClick}>Update</button>
-              <button className ="button1" onClick={this.handleCancel}>Cancel</button>
-            </form>
-            <div><p>{this.displayErrors(errorMessages)}</p></div>
+              <div className="buttons">
+                <button className="purple-button-form" onClick={this.handleClick}>Update</button>
+                <button className="pink-button-form" onClick={this.handleCancel}>Cancel</button>
+              </div>
+              </form>
+            <div><p className="error-message">{this.displayErrors(errorMessages)}</p></div>
           </div>
+        </div>
+
         )
     }
   }
