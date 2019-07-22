@@ -50,13 +50,36 @@ See only current list of protege’s
 So I can edit any typo’s made a previous time
 
 #### Test-coverage of user stories
+##### Development site testing
 
-Test | Monday 15 July | Wednesday 15 July | Friday 19 July
+Test | First test | Second test | Final test
 ---------|----------|---------|---
- View all proteges with spend and balance | :smile: | :smile: | :smile:
- View one protege with spend and balance  | :smile: | :smile: | :smile:
- Edit a protege's details | Not rendering change on view page | :smile: | :smile: | :smile:
-Delete a protege | :smile: | :smile: | :smile: | :smile:
+ View all proteges with spend and balance | ✅ | ✅ | ✅
+ View one protege with spend and balance  | ✅ | ✅ | ✅
+ Edit a protege's details | Not rendering change on view page | ✅ | ✅ | ✅
+ Data validation on protege add and edit | Handling duplicate email on backend but not frontend | ❌| ✅ | ✅
+Delete a protege | ✅ | ✅ | ✅ | ✅
+View protge items and balance | ✅ | ✅ | ✅ | ✅
+Add a purchase | ✅ | ✅ | ✅ | ✅
+Edit a purchase | ✅ | ✅ | ✅ | ✅
+Delete a purchase | ✅ | ✅ | ✅ | ✅
+ Data validation on protege add and edit | Not handling 'expenditure required' on backend or frontend | ❌ | ✅ 
+
+##### Production site testing
+Test | First test | Second test | Third test
+---------|----------|---------|---
+ View all proteges with spend and balance | ✅ | ✅ | ✅
+ View one protege with spend and balance  | ✅ | ✅ | ✅
+ Edit a protege's details | Not rendering change on view page | ✅ | ✅ 
+ Data validation on protege add and edit | Handling duplicate email on backend but not frontend | ❌ | ✅ | ✅
+Delete a protege | ✅ | ✅ | ✅ | ✅
+View protge items and balance | ✅ | ✅ | ✅ | ✅
+Add a purchase | ❌ | ❌ | ✅ |
+Edit a purchase | ✅ | ✅ | ✅ | ✅
+Delete a purchase | ❌ | ❌ | ✅ | ✅
+ Data validation on protege add and edit | Not handling 'expenditure required' on backend or frontend | ❌ | ✅ 
+
+
 
 ### A workflow diagram of the user journey/s.
 
@@ -173,9 +196,32 @@ Security: Security skills are indispensable when creating a website. You need to
 Time Management and Planning: Plan tasks in detail, have a checklist system, have a to-do list everyday, break down larger more difficult tasks into manageable pieces, include rest time!)
 And testability: number of technologies needed to test, quality of documentation.
 
+## D. Within your own project what knowledge or skills were required to complete your project, and overcome challenges?
 
+A variety of knowledge and skills were required to complete the project, including: 
+ - Planning and project management skills to ensure the project stayed on schedule and within scope
+ - Communication skills within the team to ensure the team was working cohesively.
+ - Collaboration and team work skills to ensure that knowledge and skills were shared, tasks were divided up for efficiency when needed and other tasks were worked on together when needed.
+ - Communication skills in liaising with the client to ensure the project was meeting our client's needs and staying on track
+ - Software design knowledge and skills to ensure we planned and designed our database, user flows and data flows adequately before we started building. 
+ - Empathy with our client to ensure we considered their needs and requirements in our design.
+ -  Technical knowledge and skills working with Mongo, Mongoose, Express, NodeJS, React, testing, data validation, Figma, HTML and CSS, deployment. 
 
-_______________________________________________________________________________________
+## E) Evaluate how effective your knowledge and skills were for this project, using examples, and suggest changes or improvements for future projects of a similar nature?
+
+ - Planning and project management skills were demonstrated through our daily standups, our Trello board planning with tasks allocated by person/people and due date, our retros and our constant communication. Our strong project management ensured we hit our MVP by the deadline at the end of the second week.   
+  
+ - Communication skills within the team were demonstrated through our daily, standups, constant communication face-to-face throughout the day, our Trello board and via the Slack Channel where we communicated about issues, decisions and pull requests. This communication ensured we always knew what others were working on and didn't overlap. It ensured we discussed issues early so they could be solved early. It also meant we had very few merge conflicts in Github. One aspect we could improve on would be with our morning standups with CoderAcademy staff. Sometimes we missed these because of technical or other issues on our end. 
+  
+ - Collaboration and team work skills were demonstrated through the project management and communication activities mentioned in the above two points. Our good collaboration skills ensured we hit our MVP on time and stayed on track throughout the project. 
+
+- Software design knowledge and skills were demonstrated through our design of our ERD and user flows. This planning and design ensured that when we created our database schema and routes we had a clear path to follow and very few issues with setting up the backend and we made very few changes to the backend once we started building the frontend.  
+  
+- Communication and empathy with our client was shown through our regular communication with the client, user story writing and journey mapping. One aspect we could improve on would be to confirm our MVP with the client a little earlier and provide him with a schedule. In our second meeting with the client we realised he had a slightly different idea of what could be accomplished by the project. Once we discussed timeframes with him he agreed to a smaller scoped proejct with room to grow later down the track. 
+ 
+ - We demonstrated our technical knowledge and skills working with Mongo, Mongoose, Express, NodeJS, React, testing, data validation, Figma, HTML and CSS and deployment. Since many of these skills were still very new to us, we were lacking in some of them but the project provided an excellent opportunity for us to learn and improve our knowledge and skills on the job. We also strenghtened our growth mindset because we each took on parts of the project that were challenging for us. By working through these challenges, figuring things out and asking for help when needed we learnt skills and knowledge that will set us ahead for many future projects.   
+
+____________________________________________________________
 
 
 
