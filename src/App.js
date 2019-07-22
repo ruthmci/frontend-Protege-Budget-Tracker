@@ -2,13 +2,15 @@ import React from 'react';
 import './App.css';
 import Routes from './Routes';
 import axios from 'axios';
+import Home from './components/Home';
 
 class App extends React.Component {
   // These states allow for conditional rendering of the forms
   state = {
     addingUser: true,
     updatingDone: null,
-    errorMessages: []
+    errorMessages: [],
+    homeClick: false
   }
   
   // Gets all the protege data on mount and sets it in state
@@ -105,11 +107,20 @@ class App extends React.Component {
     })
   }
   
+homeClickFunction = () => {
+  this.setState({
+    homeClick: true
+  })
+}
+
   render() {
-    const { proteges, addingUser } = this.state
+    const { proteges, addingUser, homeClick } = this.state
     if (!proteges) {
       return null
-    } else {
+    } else if (homeClick === false) {
+      return <Home homeClickFunction={this.homeClickFunction}/>
+    }
+    else {
         return <Routes proteges={proteges} errorMessages={this.state.errorMessages} addProtege={this.addProtege} addingUser={addingUser} updateProtege={this.updateProtege} updatingDone={this.state.updatingDone} />
     }
   }
