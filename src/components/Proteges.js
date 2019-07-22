@@ -30,7 +30,7 @@ const renderProteges = (protegeData) => {
               <td>{1000 - expenditure(protege.items)}</td>
               <td>
               <Link to={"/proteges/"+protege.protege._id}>
-              <button className="button1">View/edit
+              <button className="button1">Edit 
               </button></Link>
             </td>
           {/* </div> */}
