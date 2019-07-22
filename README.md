@@ -49,6 +49,14 @@ So I can keep expenses up to date
 See only current list of protege’s
 So I can edit any typo’s made a previous time
 
+#### Test-coverage of user stories
+
+Test | Monday 15 July | Wednesday 15 July | Friday 19 July
+---------|----------|---------|---
+ View all proteges with spend and balance | :smile: | :smile: | :smile:
+ View one protege with spend and balance  | :smile: | :smile: | :smile:
+ Edit a protege's details | Not rendering change on view page | :smile: | :smile: | :smile:
+Delete a protege | :smile: | :smile: | :smile: | :smile:
 
 ### A workflow diagram of the user journey/s.
 
