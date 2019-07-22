@@ -14,6 +14,9 @@ Our Client, Mark is the manager of the proteges within MYOB. Each protege is giv
 ### Instructions on how to setup, configure, deploy and use your App.
 
 ### Design documentation:
+#### OO Diagram
+![OO Diagram](https://user-images.githubusercontent.com/31295147/61612469-03351280-aca2-11e9-9a5f-7d8b4abbfb21.png)
+
 
 ### Design process
 
