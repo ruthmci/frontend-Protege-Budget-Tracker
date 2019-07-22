@@ -12,6 +12,7 @@ import { faEdit } from '@fortawesome/free-solid-svg-icons';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 
+
 // Renders the purchased items as a list. Called in the ProtegeView function below.
 
 const renderItems = (items) => {
@@ -29,7 +30,7 @@ const renderItems = (items) => {
             }
           }}>
           <button className="button1">
-          Edit Item <FontAwesomeIcon icon={ faEdit }/>
+          Edit Item <FontAwesomeIcon icon={ faEdit } background-color="purple"/>
           </button>
           </Link>  
           <Link to= {{

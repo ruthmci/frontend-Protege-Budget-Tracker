@@ -1,8 +1,7 @@
 
-
 * {
-	font-family: 'Source Sans Pro', sans-serif;
-  background: #f3f4f5;
+	/* font-family: 'Source Sans Pro', sans-serif; */
+  background: none
 }
 
 .form {
@@ -169,7 +168,7 @@
 
 .input-icon {
   position: relative;
-  background: #fff;
+  /* background: #fff; */
 }
 
 .input-icon > i {

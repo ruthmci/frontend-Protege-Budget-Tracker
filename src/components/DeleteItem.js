@@ -31,8 +31,7 @@ export default class EditItem extends Component {
 
   handleClick = (e) => {
     e.preventDefault();
-   
-
+  
     const item = {
       description: this.state.description,
       expenditure: this.state.expenditure,
