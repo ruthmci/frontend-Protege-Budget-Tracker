@@ -119,6 +119,7 @@ homeClickFunction = () => {
       return null
     // } else if (homeClick === false) {
     //   return <Home homeClickFunction={this.homeClickFunction}/>
+
     } else {
         return <Routes proteges={proteges} errorMessages={this.state.errorMessages} addProtege={this.addProtege} addingUser={addingUser} updateProtege={this.updateProtege} updatingDone={this.state.updatingDone} />
     }
