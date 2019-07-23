@@ -2,12 +2,15 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 // import './table.css'
-import {Table} from 'reactstrap'
+import {Table, Container } from 'reactstrap'
 const expenditure = (items) => items.reduce((total, item) => total + item.expenditure, 0)
 const renderProteges = (protegeData) => {
   // return protegeData.map((protege, index) => {
     return (
-      <Table className="table">
+      <Container>
+        <br></br>
+        <br></br>
+        <Table bordered hover>
        <thead className="thead-light">
             <tr>
               <th>Protege Name</th>
@@ -36,6 +39,7 @@ const renderProteges = (protegeData) => {
         
       </tbody>
       </Table>
+    </Container>
     )
   // })
 }

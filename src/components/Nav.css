@@ -1,4 +1,4 @@
-/* remove the bullets, the margins and padding from the list */
+/* remove the bullets, the margins and padding from the list
 .ul {
   list-style-type: none;
   margin: 0;
@@ -7,7 +7,7 @@
 
 /* remove the line breaks OR float: left; - get block elements to slide next to each other */
 
-.li {
+/* .li {
   display: inline;
 }
 
@@ -30,4 +30,4 @@ ul {
 li a:hover {
   background-color: #555;
   color: white;
-}
+} */ */
