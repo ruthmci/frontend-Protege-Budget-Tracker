@@ -1,6 +1,8 @@
 // Renders a list of all proteges with details, using props passed down through Routes from App.js
 import React from 'react';
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEdit } from '@fortawesome/free-solid-svg-icons';
 // import './table.css'
 import {Table, Container } from 'reactstrap'
 const expenditure = (items) => items.reduce((total, item) => total + item.expenditure, 0)
@@ -10,7 +12,7 @@ const renderProteges = (protegeData) => {
       <Container>
         <br></br>
         <br></br>
-        <Table bordered hover>
+        <Table bordered hover >
        <thead className="thead-light">
             <tr>
               <th>Protege Name</th>
@@ -30,7 +32,7 @@ const renderProteges = (protegeData) => {
               <td>{1000 - expenditure(protege.items)}</td>
               <td>
               <Link to={"/proteges/"+protege.protege._id}>
-              <button className="button1">Edit 
+              <button className="button1">Edit <FontAwesomeIcon icon={ faEdit } background-color="purple"/>
               </button></Link>
             </td>
           {/* </div> */}
