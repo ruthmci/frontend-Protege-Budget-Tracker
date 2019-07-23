@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Routes from './Routes';
 import axios from 'axios';
+import Spinner from './spinner';
 import Home from './components/Home';
 
 class App extends React.Component {
@@ -116,7 +117,7 @@ homeClickFunction = () => {
   render() {
     const { proteges, addingUser, homeClick } = this.state
     if (!proteges) {
-      return null
+      return <Spinner/>
     // } else if (homeClick === false) {
     //   return <Home homeClickFunction={this.homeClickFunction}/>
 
