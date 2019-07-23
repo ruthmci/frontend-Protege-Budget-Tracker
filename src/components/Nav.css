@@ -1,0 +1,33 @@
+/* remove the bullets, the margins and padding from the list */
+.ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* remove the line breaks OR float: left; - get block elements to slide next to each other */
+
+.li {
+  display: inline;
+}
+
+.li a {
+  float: left;
+}
+
+.a {
+  display: block;
+  padding: 8px;
+  /* background-color: #dddddd; gray background-color to each a element */
+}
+
+/* <ul> instead of each <a> element if you want a full-width background color */
+ul {
+  background-color: #dddddd;
+}
+
+/* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
+}

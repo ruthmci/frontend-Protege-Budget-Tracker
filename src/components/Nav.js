@@ -1,27 +1,21 @@
 import React from 'react';
-import { Link} from "react-router-dom";
+// import logo from '../MYOB_logo_RGB.jpg';
+import { Navbar, Nav, NavItem, NavbarBrand, NavLink } from 'reactstrap';
 
-  export default class Nav extends React.Component {
+  export default class Navigation extends React.Component {
     render() {    
       return (
-        <nav>
-          <div>
-            <Link to="/" className="Nav__brand">
-              {/* <img src="logo.svg" className="Nav__logo" /> */}
-            </Link>
-
-            <div>
-              <ul>
-                <li>
-                <Link to="/">Home</Link>
-                </li>
-                <li>
-                  <Link to="/add">Add a new protege</Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
+          <Navbar className="block-example border-bottom border-grey">
+            <NavbarBrand href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/MYOB_Logo.png/100px-MYOB_Logo.png"/></NavbarBrand>
+            <Nav>
+              <NavItem>
+                <NavLink href="/">Home</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/add"><Alert color="light">Add Protege</Alert></NavLink>
+              </NavItem>
+            </Nav>
+          </Navbar>
       );
     }
   }

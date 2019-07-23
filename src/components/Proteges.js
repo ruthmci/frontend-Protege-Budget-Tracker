@@ -2,16 +2,18 @@
 
 import React from 'react';
 import { Link } from "react-router-dom";
-import './table.css'
-import {Table} from 'reactstrap'
+//import './table.css'
+import {Table, Container} from 'reactstrap'
 
 const expenditure = (items) => items.reduce((total, item) => total + item.expenditure, 0)
 
 const renderProteges = (protegeData) => {
   // return protegeData.map((protege, index) => {
     return (
-      <Table className="table">
-       <thead className="thead-light">
+      <Container>
+        <br/><br/>
+        <Table bordered striped>
+          <thead>
             <tr>
               <th>Protege Name</th>
               <th>ProtegeEmail</th>
@@ -20,25 +22,25 @@ const renderProteges = (protegeData) => {
               <th>Actions</th>
             </tr>
           </thead>
-      <tbody>
-      {protegeData.map((protege, index) => (
-        <tr>
-          {/* <div className="protegelist" key={index}> */}
-            <td>{protege.protege.protegename}</td>
+          <tbody>
+          {protegeData.map((protege, index) => (
+            <tr>
+            {/* <div className="protegelist" key={index}> */}
+              <td>{protege.protege.protegename}</td>
               <td>{protege.protege.protegeemail}</td>
               <td>{expenditure(protege.items)}</td>
               <td>{1000 - expenditure(protege.items)}</td>
               <td>
-              <Link to={"/proteges/"+protege.protege._id}>
-              <button className="button1">View/edit
-              </button></Link>
-            </td>
-          {/* </div> */}
-        </tr>
-      ))}
-        
-      </tbody>
-      </Table>
+                <Link to={"/proteges/"+protege.protege._id}>
+                  <button className="button1">View/edit</button>
+                </Link>
+              </td>
+            {/* </div> */}
+            </tr>
+          ))}
+          </tbody>
+        </Table>
+      </Container>
     )
   // })
 }
