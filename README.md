@@ -9,7 +9,7 @@ https://github.com/ruthmci/backend-Protege-Budget-Tracker
 
 https://github.com/ruthmci/frontend-Protege-Budget-Tracker
 
-### Description of our project:
+#### Description of our project:
 
 Our Client, Mark is the manager of the proteges within MYOB. Each protege is given a learning budget each year that he must manage. Currently he’s using an excel sheet. When he receives a request from a protege, it is usually through slack. He has to check the excel sheet and update it, when necessary. He would prefer to have a functioning app where he could achieve this with the hope to merge it with another protege app that he is also using. Within the app, he can view the complete list of current protege’s. From this page, Mark can create another protege, delete the protege listing or view the list of expenses incurred by each protege. Once he is viewing the list of expenses, Mark can create, edit or delete items from this page or edit protege details and save.
 
@@ -32,17 +32,23 @@ Our Client, Mark is the manager of the proteges within MYOB. Each protege is giv
 
 
 
-### Design documentation:
+#### Design documentation:
+
 #### OO Diagram
+
 ![OO Diagram](https://user-images.githubusercontent.com/31295147/61612469-03351280-aca2-11e9-9a5f-7d8b4abbfb21.png)
 
+______________________________________________________________________________________________________________________________
 
 #### Design process/ Wireframes
-! [Design Concept](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/Design%20Concept.png)
 
+![Design Concept](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/Design%20Concept.png)
+
+______________________________________________________________________________________________________________________________
 
 #### User Stores
-! [User Stories](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/User%20Stories.jpg)
+
+![User Stories](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/User%20Stories.jpg)
 
 
 I am a protege manager, I want to;
@@ -75,6 +81,7 @@ So I can keep expenses up to date
 See only current list of protege’s
 So I can edit any typo’s made a previous time
 
+______________________________________________________________________________________________________________________________
 
 #### Test-coverage of user stories
 
@@ -149,7 +156,7 @@ ________________________________________________________________________________
 
 ______________________________________________________________________________________________________________________________
 
-### Details of Project Management & Planning:
+#### Details of Project Management & Planning:
 
 ![Team Charter](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/Team%20Charter.jpg)
 ______________________________________________________________________________________________________________________________
@@ -185,14 +192,14 @@ ________________________________________________________________________________
 ______________________________________________________________________________________________________________________________
 
 
-### Post Project Review 
+#### Post Project Review 
 
 ![Retro](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/Retro.jpg)
 
 
 ______________________________________________________________________________________________________________________________
 
-### Obtain final project sign-off /Create a questionnaire for the client to ascertain the satisfaction with your products and services:
+#### Obtain final project sign-off /Create a questionnaire for the client to ascertain the satisfaction with your products and services:
 Please take a moment to tell us about your experience and how well our web app has been meeting your expectations. 
 How often do you use the product?
 Does the product help you achieve your goals?
@@ -209,7 +216,7 @@ Can you share your reasons why?
 
 ______________________________________________________________________________________________________________________________
 
-### Record interactions with your client in a diary format/Client communications
+#### Record interactions with your client in a diary format/Client communications
 
 Client Meeting 05/07/19 through Skype 
 Mark gave us a brief description of an idea he has for an app.
@@ -250,39 +257,31 @@ We sent Mark a survey to get some feedback on his experience in dealing with us.
 
 ______________________________________________________________________________________________________________________________
 
-### Short Answer Questions: 
+#### Short Answer Questions: 
 
 #### A. What are the most important aspects of quality software?
-Reliability is the risk of software failure and the stability of a program when exposed to unexpected conditions. Reliable software has minimal downtime, good data integrity, and no errors that directly affect users.
-Number of failures, calendar time
-Performance/usability refers to an application’s use of resources and how that affects its scalability, customer satisfaction, and response times. Software architecture, source code design, and individual architectural components all contribute to performance efficiency.
-Load testing, stress testing, response time.
-Security assesses how well an application protects information against the risk of software breaches. The quantity and severity of vulnerabilities found in a software system are indicators of its security level. Poor coding and architectural weaknesses often lead to software vulnerabilities.
-Time to fix failures, number of error messages
-Maintainability is the ease with which you can modify software, adapt it for other purposes, or transfer it from one development team to another. Compliance with software architectural rules and use of consistent coding across the application combine to make software maintainable.
-(Lines of code)
-
-
-
-
+- Reliability is the risk of software failure and the stability of a program when exposed to unexpected conditions. Reliable software has minimal downtime, good data integrity, and no errors that directly affect users.
+- Performance/usability is the app’s use of resources and how that affects its scalability, customer satisfaction, and response times. Software architecture, source code design, and individual architectural components all contribute to performance efficiency.
+- Testing; development, production and both unit and integration tests in both backend and frontend.
+- Security assesses how well an application protects information against the risk of software breaches. The quantity and severity of vulnerabilities found in a software system are indicators of its security level. Poor coding and architectural weaknesses often lead to software vulnerabilities.
+- Maintainability is the ease with which you can modify software, adapt it for other purposes, or transfer it from one development team to another. Compliance with software architectural rules and use of consistent coding across the application combine to make software maintainable.
 
 
 #### B. What libraries are being used in the app and why?
-ReactJS is fast so it can handle complex updates and still be quick. It is modular, using smaller, reusable files which makes it more maintainable. It is also scalable, so it can handle large programs that display a lot of changing data. React is popular so there is a lot of information available online.
-Mocha runs on Node.js and the browser to do simple testing. It runs tests serially, which makes it easy to track and report what’s going on.
-Babel is used as a simple javascript compiler. It supports the latest version of JavaScript so it can be used without waiting for the browser support to catch up.
-ESLint is used for catching syntax errors and style issues in the command line.
-Jester is a cross-platform javascript testing tool which uses the karma test runner for running unittests on multiple browsers.
-Enzyme is a JavaScript Testing utility for React that makes it easier to test your React Components' output.
+- ReactJS is fast so it can handle complex updates and still be quick. It is modular, using smaller, reusable files which makes it more maintainable. It is also scalable, so it can handle large programs that display a lot of changing data. React is popular so there is a lot of information available online.
+- Mocha runs on Node.js and the browser to do simple testing. It runs tests serially, which makes it easy to track and report what’s going on.
+- Babel is used as a simple javascript compiler. It supports the latest version of JavaScript so it can be used without waiting for the browser support to catch up.
+- Jester is a cross-platform javascript testing tool which uses the karma test runner for running unittests on multiple browsers.
+- Enzyme is a JavaScript Testing utility for React that makes it easier to test your React Components' output.
 
 #### C. A team is about to engage in a project, developing a website for a small business. What knowledge and skills would they need in order to develop the project?
-Programming: Javascript, HTML, CSS, MongoDB or equivalent, React, API
-Testing : Before giving the web app to the client, make sure its compatible with most browsers, links are working, forms work, navigation menu works, pages are loading fast. 
-Basic Knowledge of Design: understand basic principles of a good web app layout and also responsive design. At a minimum, a developer of a website should be able to crop or resize an image, customise colours, apply some effects.
-SEO: Developers have to be aware of redirecting, so that both users and search engines can be sent to different URLs from the page the was originally requested, using 301, 302 or Meta Refresh. (Meta tags and titles, subdomains, internal linking, sitemap are all key components of SEO). 
-Security: Security skills are indispensable when creating a website. You need to be ready for any security attack and know how to provide a safe solution for it. (egs include SQL injection is an attack of data-driven software (applications), Cross-site scripting attack occurs when a hacker uses a malicious script to infect a web page, Error messages can be a source of information for hackers).  
-Time Management and Planning: Plan tasks in detail, have a checklist system, have a to-do list everyday, break down larger more difficult tasks into manageable pieces, include rest time!)
-And testability: number of technologies needed to test, quality of documentation.
+- Programming: Javascript, HTML, CSS, MongoDB or equivalent, React, API
+- Testing : Before giving the web app to the client, make sure its compatible with most browsers, links are working, forms work, navigation menu works, pages are loading fast. 
+- Basic Knowledge of Design: understand basic principles of a good web app layout and also responsive design. At a minimum, a developer of a website should be able to crop or resize an image, customise colours, apply some effects.
+- SEO: Developers have to be aware of redirecting, so that both users and search engines can be sent to different URLs from the page the was originally requested, using 301, 302 or Meta Refresh. (Meta tags and titles, subdomains, internal linking, sitemap are all key components of SEO). 
+- Security: Security skills are indispensable when creating a website. You need to be ready for any security attack and know how to provide a safe solution for it. (egs include SQL injection is an attack of data-driven software (applications), Cross-site scripting attack occurs when a hacker uses a malicious script to infect a web page, Error messages can be a source of information for hackers).  
+- Time Management and Planning: Plan tasks in detail, have a checklist system, have a to-do list everyday, break down larger more difficult tasks into manageable pieces, include rest time!)
+- And testability: number of technologies needed to test, quality of documentation.
 
 #### D. Within your own project what knowledge or skills were required to complete your project, and overcome challenges?
 
