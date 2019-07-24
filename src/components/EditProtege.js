@@ -67,7 +67,7 @@ export default class EditProtege extends Component {
            <div className="form-box">
               <div className="form-container-protege">
                 <div className="form-header-box">
-                  <h2 className="form-header">Edit protege details</h2>
+                  <h3 className="form-header"><b>Edit protege details</b></h3>
                 </div>
             <form className="form" onSubmit={this.onSubmit}>
               <div className="form-group"> 

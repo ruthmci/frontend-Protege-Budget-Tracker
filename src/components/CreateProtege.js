@@ -59,7 +59,7 @@ class CreateProtege extends Component {
         <div className="form-box">
         <div className="form-container-protege">
           <div className="form-header-box">
-            <h2 className="form-header">Register a protege</h2>
+            <h3 className="form-header"><b>Register a protege</b></h3>
           </div>
           <form className="form" onSubmit={this.handleClick} >
            <div className="form-group"> 

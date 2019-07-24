@@ -87,7 +87,7 @@ export default class EditItem extends Component {
       <div className="form-box">
         <div className="form-container-item">
           <div className="form-header-box">
-            <h2 className="form-header">Edit a purchase</h2>
+            <h3 className="form-header"><b>Edit a purchase</b></h3>
           </div>
       <form className="form" onSubmit={this.onSubmit}>
         <div className="form-group"> 
