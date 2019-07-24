@@ -13,32 +13,34 @@ https://github.com/ruthmci/frontend-Protege-Budget-Tracker
 
 Our Client, Mark is the manager of the proteges within MYOB. Each protege is given a learning budget each year that he must manage. Currently he’s using an excel sheet. When he receives a request from a protege, it is usually through slack. He has to check the excel sheet and update it, when necessary. He would prefer to have a functioning app where he could achieve this with the hope to merge it with another protege app that he is also using. Within the app, he can view the complete list of current protege’s. From this page, Mark can create another protege, delete the protege listing or view the list of expenses incurred by each protege. Once he is viewing the list of expenses, Mark can create, edit or delete items from this page or edit protege details and save.
 
-### Tech stack (e.g. html, css, deployment platform, etc)
+#### Tech stack
 
-Axios (Promise based HTTP client for the browser and node.js.)
-Express (Express is a minimal and flexible Node.js web application framework)
-Node (Node.js is cross-platform JavaScript run-time environment that executes JavaScript code outside of a browser)
-Now (for rapid deployment to a live production environment (backend))
-Netlify (for rapid deployment to a live production environment (frontend))
-Mongo DB (to store data)
-Git SCM & GitHub (for effective distributed version control)
-Visual Studio Code (as the team's preferred text editor)
-Figma (for designing)
-HTML/CSS/JS (for rendering views, in built to React)
-Bootstrap (for rapid production quality websites through modern CSS)
+- Axios (Promise based HTTP client for the browser and node.js.)
+- Express (Express is a minimal and flexible Node.js web application framework)
+- Node (Node.js is cross-platform JavaScript run-time environment that executes JavaScript code outside of a browser)
+- Now (for rapid deployment to a live production environment (backend))
+- Netlify (for rapid deployment to a live production environment (frontend))
+- Mongo DB (to store data)
+- Git SCM & GitHub (for effective distributed version control)
+- Visual Studio Code (as the team's preferred text editor)
+- Figma (for designing)
+- HTML/CSS/JS (for rendering views, in built to React)
+- Bootstrap (for rapid production quality websites through modern CSS)
 
-### Instructions on how to setup, configure, deploy and use your App.
+#### Instructions on how to setup, configure, deploy and use your App.
+
+
 
 ### Design documentation:
 #### OO Diagram
 ![OO Diagram](https://user-images.githubusercontent.com/31295147/61612469-03351280-aca2-11e9-9a5f-7d8b4abbfb21.png)
 
 
-### Design process ### Wireframes
+#### Design process #### Wireframes
 ! [Design Concept](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/Design%20Concept.png)
 
 
-### User Stores
+#### User Stores
 ! [User Stories](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/User%20Stories.jpg)
 
 
@@ -111,15 +113,15 @@ Delete a purchase | ❌ | ❌ | ✅ | ✅
 
 
 
-### A workflow diagram of the user journey/s
+#### A workflow diagram of the user journey/s
 
 ![Workflow Diagram](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/Workflow%20Diagram.png)
 
-### Database Entity Relationship Diagrams
+#### Database Entity Relationship Diagrams
 
 ![Entity Relationship Diagrams](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/ERD.png)
 
-### Data Flow Diagram
+#### Data Flow Diagram
 
 ![Data Flow Diagram](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/Dataflow%20Diagram.png)
 
@@ -133,11 +135,11 @@ Delete a purchase | ❌ | ❌ | ✅ | ✅
 ![Kanban Week 2](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/Kanban%20II.jpg)
 
 
-### Project plan & timeline
+#### Project plan & timeline
 
 ![Project plan & timeline](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/Project%20Timeline.png)
 
-### Screenshots of Trello board(s)
+#### Screenshots of Trello board(s)
 
 ![Trello I](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/Trello%20I.png)
 
@@ -147,8 +149,6 @@ Delete a purchase | ❌ | ❌ | ✅ | ✅
 
 ### Post Project Review 
 
-
-### Project Management
 ![Retro](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/Retro.jpg)
 
 
@@ -211,7 +211,7 @@ We sent Mark a survey to get some feedback on his experience in dealing with us.
 
 ### Short Answer Questions: 
 
-## A. What are the most important aspects of quality software?
+#### A. What are the most important aspects of quality software?
 Reliability is the risk of software failure and the stability of a program when exposed to unexpected conditions. Reliable software has minimal downtime, good data integrity, and no errors that directly affect users.
 Number of failures, calendar time
 Performance/usability refers to an application’s use of resources and how that affects its scalability, customer satisfaction, and response times. Software architecture, source code design, and individual architectural components all contribute to performance efficiency.
@@ -226,7 +226,7 @@ Maintainability is the ease with which you can modify software, adapt it for ot
 
 
 
-## B. What libraries are being used in the app and why?
+#### B. What libraries are being used in the app and why?
 ReactJS is fast so it can handle complex updates and still be quick. It is modular, using smaller, reusable files which makes it more maintainable. It is also scalable, so it can handle large programs that display a lot of changing data. React is popular so there is a lot of information available online.
 Mocha runs on Node.js and the browser to do simple testing. It runs tests serially, which makes it easy to track and report what’s going on.
 Babel is used as a simple javascript compiler. It supports the latest version of JavaScript so it can be used without waiting for the browser support to catch up.
@@ -234,7 +234,7 @@ ESLint is used for catching syntax errors and style issues in the command line.
 Jester is a cross-platform javascript testing tool which uses the karma test runner for running unittests on multiple browsers.
 Enzyme is a JavaScript Testing utility for React that makes it easier to test your React Components' output.
 
-## C. A team is about to engage in a project, developing a website for a small business. What knowledge and skills would they need in order to develop the project?
+#### C. A team is about to engage in a project, developing a website for a small business. What knowledge and skills would they need in order to develop the project?
 Programming: Javascript, HTML, CSS, MongoDB or equivalent, React, API
 Testing : Before giving the web app to the client, make sure its compatible with most browsers, links are working, forms work, navigation menu works, pages are loading fast. 
 Basic Knowledge of Design: understand basic principles of a good web app layout and also responsive design. At a minimum, a developer of a website should be able to crop or resize an image, customise colours, apply some effects.
@@ -243,7 +243,7 @@ Security: Security skills are indispensable when creating a website. You need to
 Time Management and Planning: Plan tasks in detail, have a checklist system, have a to-do list everyday, break down larger more difficult tasks into manageable pieces, include rest time!)
 And testability: number of technologies needed to test, quality of documentation.
 
-## D. Within your own project what knowledge or skills were required to complete your project, and overcome challenges?
+#### D. Within your own project what knowledge or skills were required to complete your project, and overcome challenges?
 
 A variety of knowledge and skills were required to complete the project, including: 
  - Planning and project management skills to ensure the project stayed on schedule and within scope
@@ -254,7 +254,7 @@ A variety of knowledge and skills were required to complete the project, includi
  - Empathy with our client to ensure we considered their needs and requirements in our design.
  -  Technical knowledge and skills working with Mongo, Mongoose, Express, NodeJS, React, testing, data validation, Figma, HTML and CSS, deployment. 
 
-## E) Evaluate how effective your knowledge and skills were for this project, using examples, and suggest changes or improvements for future projects of a similar nature?
+#### E. Evaluate how effective your knowledge and skills were for this project, using examples, and suggest changes or improvements for future projects of a similar nature?
 
  - Planning and project management skills were demonstrated through our daily standups, our Trello board planning with tasks allocated by person/people and due date, our retros and our constant communication. Our strong project management ensured we hit our MVP by the deadline at the end of the second week.   
   
