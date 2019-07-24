@@ -1,15 +1,31 @@
 
-### A link (URL) to your published App:
+### A link (URL) to your published App: (screenshot in docs)
 
-### A link to your GitHub repository:
+https://proteges-budget-tracker.netlify.com
+
+### A link to your GitHub repository: (screenshot in docs)
+
 https://github.com/ruthmci/backend-Protege-Budget-Tracker
+
 https://github.com/ruthmci/frontend-Protege-Budget-Tracker
 
 ### Description of our project:
+
 Our Client, Mark is the manager of the proteges within MYOB. Each protege is given a learning budget each year that he must manage. Currently he’s using an excel sheet. When he receives a request from a protege, it is usually through slack. He has to check the excel sheet and update it, when necessary. He would prefer to have a functioning app where he could achieve this with the hope to merge it with another protege app that he is also using. Within the app, he can view the complete list of current protege’s. From this page, Mark can create another protege, delete the protege listing or view the list of expenses incurred by each protege. Once he is viewing the list of expenses, Mark can create, edit or delete items from this page or edit protege details and save.
-### Screenshots
 
 ### Tech stack (e.g. html, css, deployment platform, etc)
+
+Axios (Promise based HTTP client for the browser and node.js.)
+Express (Express is a minimal and flexible Node.js web application framework)
+Node (Node.js is cross-platform JavaScript run-time environment that executes JavaScript code outside of a browser)
+Now (for rapid deployment to a live production environment (backend))
+Netlify (for rapid deployment to a live production environment (frontend))
+Mongo DB (to store data)
+Git SCM & GitHub (for effective distributed version control)
+Visual Studio Code (as the team's preferred text editor)
+Figma (for designing)
+HTML/CSS/JS (for rendering views, in built to React)
+Bootstrap (for rapid production quality websites through modern CSS)
 
 ### Instructions on how to setup, configure, deploy and use your App.
 
@@ -18,9 +34,13 @@ Our Client, Mark is the manager of the proteges within MYOB. Each protege is giv
 ![OO Diagram](https://user-images.githubusercontent.com/31295147/61612469-03351280-aca2-11e9-9a5f-7d8b4abbfb21.png)
 
 
-### Design process
+### Design process ### Wireframes
+! [Design Concept](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/Design%20Concept.png)
+
 
 ### User Stores
+! [User Stories](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/User%20Stories.jpg)
+
 
 I am a protege manager, I want to;
 
@@ -53,6 +73,13 @@ See only current list of protege’s
 So I can edit any typo’s made a previous time
 
 #### Test-coverage of user stories
+
+![User Testing](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/User%20Testing%20I.png)
+
+![User Client Testing](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/User:Client%20testing.png)
+
+![Client Feedback](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/Client%20testing:feedback.png)
+
 ##### Development site testing
 
 Test | First test | Second test | Final test
@@ -84,33 +111,47 @@ Delete a purchase | ❌ | ❌ | ✅ | ✅
 
 
 
-### A workflow diagram of the user journey/s.
+### A workflow diagram of the user journey/s
 
-### Wireframes
+![Workflow Diagram](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/Workflow%20Diagram.png)
 
 ### Database Entity Relationship Diagrams
 
+![Entity Relationship Diagrams](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/ERD.png)
+
 ### Data Flow Diagram
 
-### OO design documentation
+![Data Flow Diagram](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/Dataflow%20Diagram.png)
+
 
 ### Details of Project Management & Planning:
+
+![Team Charter](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/Team%20Charter.jpg)
+
+![Kanban Week 1](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/kanban%20I.jpg)
+
+![Kanban Week 2](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/Kanban%20II.jpg)
+
+
 ### Project plan & timeline
-### Client communications
+
+![Project plan & timeline](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/Project%20Timeline.png)
+
 ### Screenshots of Trello board(s)
-### Answers to the Short Answer questions (Section 2.2)
 
-Project Management
-Demonstrate your ability to satisfy your client with the quality of your work and high level of service.
-Plan information gathering activities to determine project requirements, constraints and risks
-Develop project charter, including preliminary statement of project scope and obtain sign-off
-Prepare project work breakdown and schedule
-Allocate roles and responsibilities to team members, based on project solution requirements
-Monitor each other’s assigned work
-Reassess ongoing project scope changes, risks and issues
-Manage system testing and hand over activities. Prepare maintenance or support plans for client
+![Trello I](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/Trello%20I.png)
 
-As a team, conduct post project review 
+![Trello II](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/Trello%20II.png)
+
+![Trello III](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/Trello%20III.png)
+
+### Post Project Review 
+
+
+### Project Management
+![Retro](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/Retro.jpg)
+
+
 _____________________________________________________________
 ### Obtain final project sign-off /Create a questionnaire for the client to ascertain the satisfaction with your products and services:
 Please take a moment to tell us about your experience and how well our web app has been meeting your expectations. 
@@ -157,9 +198,13 @@ if there are, add new protege to database using API details (name, email) and gi
 
 Client Testing 19/07/19
 Sent our Client a link to our prototype for him to use and let us know any feedback he has on the functionality.
+The link we sent wasn't working, we discovered that we needed to include redirects file so netlify could follow the routes.
 
+Client Testing 23/07/19
+We again sent our Client a functioning deployed app. This one included styling and was our final product. Mark came back to us to say that he was very happy with the final product.
 
-
+Client Survey 24/07/19
+We sent Mark a survey to get some feedback on his experience in dealing with us.
 
 
 
@@ -186,12 +231,11 @@ ReactJS is fast so it can handle complex updates and still be quick. It is modul
 Mocha runs on Node.js and the browser to do simple testing. It runs tests serially, which makes it easy to track and report what’s going on.
 Babel is used as a simple javascript compiler. It supports the latest version of JavaScript so it can be used without waiting for the browser support to catch up.
 ESLint is used for catching syntax errors and style issues in the command line.
-
-
+Jester is a cross-platform javascript testing tool which uses the karma test runner for running unittests on multiple browsers.
+Enzyme is a JavaScript Testing utility for React that makes it easier to test your React Components' output.
 
 ## C. A team is about to engage in a project, developing a website for a small business. What knowledge and skills would they need in order to develop the project?
 Programming: Javascript, HTML, CSS, MongoDB or equivalent, React, API
-
 Testing : Before giving the web app to the client, make sure its compatible with most browsers, links are working, forms work, navigation menu works, pages are loading fast. 
 Basic Knowledge of Design: understand basic principles of a good web app layout and also responsive design. At a minimum, a developer of a website should be able to crop or resize an image, customise colours, apply some effects.
 SEO: Developers have to be aware of redirecting, so that both users and search engines can be sent to different URLs from the page the was originally requested, using 301, 302 or Meta Refresh. (Meta tags and titles, subdomains, internal linking, sitemap are all key components of SEO). 
