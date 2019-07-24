@@ -24,10 +24,11 @@ Our Client, Mark is the manager of the proteges within MYOB. Each protege is giv
 - Git SCM & GitHub (for effective distributed version control)
 - Visual Studio Code (as the team's preferred text editor)
 - Figma (for designing)
-- HTML/CSS/JS (for rendering views, in built to React)
+- HTML/CSS/JS (for rendering views)
 - Bootstrap (for rapid production quality websites through modern CSS)
 
 #### Instructions on how to setup, configure, deploy and use your App.
+
 
 
 
@@ -36,7 +37,7 @@ Our Client, Mark is the manager of the proteges within MYOB. Each protege is giv
 ![OO Diagram](https://user-images.githubusercontent.com/31295147/61612469-03351280-aca2-11e9-9a5f-7d8b4abbfb21.png)
 
 
-#### Design process #### Wireframes
+#### Design process/ Wireframes
 ! [Design Concept](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/Design%20Concept.png)
 
 
@@ -74,15 +75,30 @@ So I can keep expenses up to date
 See only current list of protege’s
 So I can edit any typo’s made a previous time
 
+
 #### Test-coverage of user stories
+
+##### User Testing
 
 ![User Testing](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/User%20Testing%20I.png)
 
+______________________________________________________________________________________________________________________________
+
+##### User/Client Testing
+
 ![User Client Testing](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/User:Client%20testing.png)
+
+______________________________________________________________________________________________________________________________
+
+##### Client Feedback
 
 ![Client Feedback](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/Client%20testing:feedback.png)
 
+______________________________________________________________________________________________________________________________
+
+
 ##### Development site testing
+
 
 Test | First test | Second test | Final test
 ---------|----------|---------|---
@@ -96,6 +112,9 @@ Add a purchase | ✅ | ✅ | ✅ | ✅
 Edit a purchase | ✅ | ✅ | ✅ | ✅
 Delete a purchase | ✅ | ✅ | ✅ | ✅
  Data validation on protege add and edit | Not handling 'expenditure required' on backend or frontend | ❌ | ✅ 
+
+
+______________________________________________________________________________________________________________________________
 
 ##### Production site testing
 Test | First test | Second test | Third test
@@ -111,48 +130,68 @@ Edit a purchase | ✅ | ✅ | ✅ | ✅
 Delete a purchase | ❌ | ❌ | ✅ | ✅
  Data validation on protege add and edit | Not handling 'expenditure required' on backend or frontend | ❌ | ✅ 
 
+______________________________________________________________________________________________________________________________
 
 
 #### A workflow diagram of the user journey/s
 
 ![Workflow Diagram](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/Workflow%20Diagram.png)
+______________________________________________________________________________________________________________________________
 
 #### Database Entity Relationship Diagrams
 
 ![Entity Relationship Diagrams](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/ERD.png)
+______________________________________________________________________________________________________________________________
 
 #### Data Flow Diagram
 
 ![Data Flow Diagram](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/Dataflow%20Diagram.png)
 
+______________________________________________________________________________________________________________________________
 
 ### Details of Project Management & Planning:
 
 ![Team Charter](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/Team%20Charter.jpg)
+______________________________________________________________________________________________________________________________
 
 ![Kanban Week 1](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/kanban%20I.jpg)
+______________________________________________________________________________________________________________________________
 
 ![Kanban Week 2](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/Kanban%20II.jpg)
 
-
+______________________________________________________________________________________________________________________________
 #### Project plan & timeline
 
 ![Project plan & timeline](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/Project%20Timeline.png)
 
+______________________________________________________________________________________________________________________________
 #### Screenshots of Trello board(s)
 
+##### Trello I
+
 ![Trello I](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/Trello%20I.png)
+______________________________________________________________________________________________________________________________
+
+##### Trello II
 
 ![Trello II](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/Trello%20II.png)
 
+______________________________________________________________________________________________________________________________
+
+##### Trello III
+
 ![Trello III](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/Trello%20III.png)
+
+______________________________________________________________________________________________________________________________
+
 
 ### Post Project Review 
 
 ![Retro](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/Retro.jpg)
 
 
-_____________________________________________________________
+______________________________________________________________________________________________________________________________
+
 ### Obtain final project sign-off /Create a questionnaire for the client to ascertain the satisfaction with your products and services:
 Please take a moment to tell us about your experience and how well our web app has been meeting your expectations. 
 How often do you use the product?
@@ -168,7 +207,8 @@ Dissatisfied
 Very Dissatisfied
 Can you share your reasons why?
 
-__________________________________________________________
+______________________________________________________________________________________________________________________________
+
 ### Record interactions with your client in a diary format/Client communications
 
 Client Meeting 05/07/19 through Skype 
@@ -208,6 +248,7 @@ We sent Mark a survey to get some feedback on his experience in dealing with us.
 
 
 
+______________________________________________________________________________________________________________________________
 
 ### Short Answer Questions: 
 
