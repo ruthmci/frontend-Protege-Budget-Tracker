@@ -213,7 +213,7 @@ ________________________________________________________________________________
 
 #### Obtain final project sign-off /Create a questionnaire for the client to ascertain the satisfaction with your products and services:
 
-![Survey Monkey](https://www.surveymonkey.com/r/JN9QWB2)
+Survey Monkey: https://www.surveymonkey.com/r/JN9QWB2
 
 ______________________________________________________________________________________________________________________________
 
