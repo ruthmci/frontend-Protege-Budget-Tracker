@@ -29,8 +29,19 @@ Our Client, Mark is the manager of the proteges within MYOB. Each protege is giv
 
 #### Instructions on how to setup, configure, deploy and use your App.
 
+- To deploy with Now, you need to install Now CLI, in terminal.
+- You can create a new javascript application using either npm or Yarn.
+- When your javascript app is created, all you have to do is cd into the backend folder in your terminal and then deploy your app with the command ‘now’.
+- Once deployed, you will get a unique URL to reference the current version of your project, and a staging alias that is assigned on each deployment to share the latest changes under the same address.
 
+- Creating a new site on Netlify, you need to create an account and log in. Click the ‘Add A New Project' button.
+- After pushing to your repo on GitHub, you need to link Netlify to GitHub. 
+- Click the ‘Authorize Application’ button to allow Netlify and GitHub to talk to each other. 
+- When you’ve connected Netlify and GitHub, you can see a list of your Git repos and select the one you want.
+- In terminal, cd into the frontend folder and use the build command ‘npm run build’.
+- Then type ‘netlify deploy’ and when it’s finished running, type ‘netlify deploy - -prod’. Copy and paste the url into browser and you have a live app. 
 
+______________________________________________________________________________________________________________________________
 
 #### Design documentation:
 
@@ -53,33 +64,33 @@ ________________________________________________________________________________
 
 I am a protege manager, I want to;
 
-Keep a record of all the proteges and their purchases in the program 
-See an overview of total spent in the FMA
-See a detailed view of the total spend of individual proteges
-Track the protege learning budget
-View individual protege details
-See the overview for each protege
-Analyse how the proteges are spending , sort purchases by category and by amount
-Log amount spent by individual proteges
-I want to create a new protege
-I want to update a protege details
-I want to sort purchases by category or by spend
-Delete protege from view/Archive (status update). Read-only.
-I want to edit budget item or amount
-I want to be able to sign up new users
-I want to be able to upload images of the proteges to help identify them
+- Keep a record of all the proteges and their purchases in the program 
+- See an overview of total spent in the FMA
+- See a detailed view of the total spend of individual proteges
+- Track the protege learning budget
+- View individual protege details
+- See the overview for each protege
+- Analyse how the proteges are spending , sort purchases by category and by amount
+- Log amount spent by individual proteges
+- I want to create a new protege
+- I want to update a protege details
+- I want to sort purchases by category or by spend
+- Delete protege from view/Archive (status update). Read-only.
+- I want to edit budget item or amount
+- I want to be able to sign up new users
+- I want to be able to upload images of the proteges to help identify them
 
 …so that I can;
-track how much is left in the Future Makers Academy learning budget.
-Track how much is remaining in their overall budget.
-See what proteges are finding most valuable as a source of learning.
-So I can check the protege’s individual budget.
-So that I can manage and edit the protege list and expenses.
-To make sure not to go over FMA budget
-To make sure each protege stays within their budget
-So I can keep expenses up to date
-See only current list of protege’s
-So I can edit any typo’s made a previous time
+- track how much is left in the Future Makers Academy learning budget.
+- Track how much is remaining in their overall budget.
+- See what proteges are finding most valuable as a source of learning.
+- So I can check the protege’s individual budget.
+- So that I can manage and edit the protege list and expenses.
+- To make sure not to go over FMA budget
+- To make sure each protege stays within their budget
+- So I can keep expenses up to date
+- See only current list of protege’s
+- So I can edit any typo’s made a previous time
 
 ______________________________________________________________________________________________________________________________
 
@@ -196,23 +207,13 @@ ________________________________________________________________________________
 
 ![Retro](https://github.com/ruthmci/frontend-Protege-Budget-Tracker/blob/master/docs/Retro.jpg)
 
+In the retro, we discussed the things we enjoyed about the project, the things we struggled with and what we would do differently. We found the stand-ups everyday very helpful and the meetings with the Client were great to keep us on track and the Trello was a great reference point to return to. We struggled with Mongo DB and testing. But also all the talking, meetings and planning were alot more that what we had done previously. In the future, we would try to do more consulting with the design stage and building the backend, and more pair programming so that everyone is following along and involved in the process.
 
 ______________________________________________________________________________________________________________________________
 
 #### Obtain final project sign-off /Create a questionnaire for the client to ascertain the satisfaction with your products and services:
-Please take a moment to tell us about your experience and how well our web app has been meeting your expectations. 
-How often do you use the product?
-Does the product help you achieve your goals?
-What is your favourite aspect of the product?
-What would you improve if you could? 
-How satisfied are you with your experience working with us?
 
-Very satisfied
-Satisfied
-Neutral
-Dissatisfied
-Very Dissatisfied
-Can you share your reasons why?
+![Survey Monkey](https://www.surveymonkey.com/r/JN9QWB2)
 
 ______________________________________________________________________________________________________________________________
 
@@ -251,7 +252,7 @@ Client Testing 23/07/19
 We again sent our Client a functioning deployed app. This one included styling and was our final product. Mark came back to us to say that he was very happy with the final product.
 
 Client Survey 24/07/19
-We sent Mark a survey to get some feedback on his experience in dealing with us.
+We sent Mark a survey to get some feedback on his experience in dealing with us. Mark signed off on the final product and completed the survey.
 
 
 
